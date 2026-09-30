@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Machine Vision Dashboard</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="machine-vision.css">
+</head>
+
+<body>
+
+    <div class="mv-dashboard-app">
+
+        <aside class="mv-sidebar" id="mvSidebar">
+
+           <div class="sidebar-logo">
+            <a href="user-dashboard.html">
+                <img src="Assets/blacklogo.webp" alt="Stackly">
+            </a>
+        </div>
+
+        <div class="sidebar-user">
+
+           <div class="sidebar-avatar">
+                <i class="bi bi-person-fill"></i>
+            </div>
+
+            <div class="sidebar-user-text">
+                <strong id="sidebarUserName">User</strong>
+                <span id="sidebarUserRole">User Account</span>
+            </div>
+
+        </div>
+
+        <div class="sidebar-menu">
+
+            <span class="sidebar-heading">MAIN MENU</span>
+
+            <a href="user-dashboard.html" class="sidebar-link ">
+                <i class="bi bi-grid-1x2-fill"></i>
+                <span>Dashboard</span>
+            </a>
+
+        </div>
+
+        <div class="sidebar-menu">
+
+            <span class="sidebar-heading">SOLUTIONS</span>
+
+
+        
+
+            <a href="machine-vision.html" class="sidebar-link active">
+                <i class="bi bi-eye-fill"></i>
+                <span>Machine Vision</span>
+            </a>
+
+
+        </div>
+
+        <div class="sidebar-menu">
+
+            <span class="sidebar-heading">ACCOUNT</span>
+
+            <a href="myprofile.html" class="sidebar-link">
+                <i class="bi bi-person-fill"></i>
+                <span>My Profile</span>
+            </a>
+
+        
+
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html" class="sidebar-link logout-link" id="logoutButton">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+        </aside>
+
+        <div
+            class="mv-sidebar-overlay"
+            id="mvSidebarOverlay"
+        ></div>
+
+        <header class="mv-dashboard-header">
+
+            <div class="mv-header-left">
+
+                <button
+                    type="button"
+                    class="mv-mobile-menu-button"
+                    id="mvMobileMenuButton"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <a
+                    href="user-dashboard.html"
+                    class="mv-mobile-header-logo"
+                >
+                    <img
+                        src="Assets/blacklogo.webp"
+                        alt="Stackly"
+                    >
+                </a>
+
+                <div class="mv-desktop-page-title">
+
+                    <span>
+                        MACHINE VISION
+                    </span>
+
+                    <strong>
+                        Operations Dashboard
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <div class="mv-header-actions">
+
+                <a
+                    href="error.html"
+                    class="mv-header-icon"
+                    aria-label="Search"
+                >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <button
+                    type="button"
+                    class="mv-header-icon"
+                    id="mvNotificationButton"
+                    aria-label="Notifications"
+                >
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="mv-notification-dot"></span>
+                </button>
+
+                <a
+                    href="error.html"
+                    class="mv-header-user"
+                >
+
+                    <div class="mv-header-user-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="mv-header-user-info">
+
+                        <strong id="headerUserName">
+                            User
+                        </strong>
+
+                        <span id="headerUserRole">
+                            Client
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </header>
+
+        <main class="mv-dashboard-main">
+
+            <div class="mv-dashboard-content">
+
+                <section class="mv-welcome-section">
+
+                    <div class="mv-welcome-copy">
+
+                        <span class="mv-dashboard-label">
+                            <i class="fa-solid fa-circle"></i>
+                            LIVE VISION SYSTEM
+                        </span>
+
+                        <h1>
+                            Machine Vision
+                            <strong>Control Center</strong>
+                        </h1>
+
+                        <p>
+                            Monitor inspection systems, camera performance,
+                            AI detection results and production quality from
+                            one centralized workspace.
+                        </p>
+
+                    </div>
+
+                    <div class="mv-welcome-actions">
+
+                        <a
+                            href="error.html"
+                            class="mv-primary-btn"
+                        >
+                            <i class="fa-solid fa-display"></i>
+                            Open Live Monitor
+                        </a>
+
+                        <a
+                            href="error.html"
+                            class="mv-secondary-btn"
+                        >
+                            <i class="fa-solid fa-file-export"></i>
+                            Export Report
+                        </a>
+
+                    </div>
+
+                </section>
+
+                <section class="mv-stat-grid">
+
+                    <div class="mv-stat-card">
+
+                        <div class="mv-stat-top">
+
+                            <span>
+                                Total Inspections
+                            </span>
+
+                            <div class="mv-stat-icon">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="mv-stat-value">
+                            48,620
+                        </div>
+
+                        <div class="mv-stat-footer">
+
+                            <span class="mv-positive">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                                12.8%
+                            </span>
+
+                            <span>
+                                vs last period
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mv-stat-card">
+
+                        <div class="mv-stat-top">
+
+                            <span>
+                                Detection Accuracy
+                            </span>
+
+                            <div class="mv-stat-icon">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="mv-stat-value">
+                            98.7%
+                        </div>
+
+                        <div class="mv-stat-footer">
+
+                            <span class="mv-positive">
+                                <i class="fa-solid fa-arrow-up"></i>
+                                1.4%
+                            </span>
+
+                            <span>
+                                model accuracy
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mv-stat-card">
+
+                        <div class="mv-stat-top">
+
+                            <span>
+                                Defect Rate
+                            </span>
+
+                            <div class="mv-stat-icon">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="mv-stat-value">
+                            0.8%
+                        </div>
+
+                        <div class="mv-stat-footer">
+
+                            <span class="mv-positive">
+                                <i class="fa-solid fa-arrow-trend-down"></i>
+                                0.3%
+                            </span>
+
+                            <span>
+                                improved quality
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mv-stat-card">
+
+                        <div class="mv-stat-top">
+
+                            <span>
+                                Active Cameras
+                            </span>
+
+                            <div class="mv-stat-icon">
+                                <i class="fa-solid fa-camera"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="mv-stat-value">
+                            24/26
+                        </div>
+
+                        <div class="mv-stat-footer">
+
+                            <span class="mv-warning">
+                                <i class="fa-solid fa-circle"></i>
+                                2 offline
+                            </span>
+
+                            <span>
+                                system status
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="mv-main-grid">
+
+                    <div class="mv-panel mv-live-panel">
+
+                        <div class="mv-panel-header">
+
+                            <div>
+
+                                <span class="mv-panel-kicker">
+                                    VISION STREAM
+                                </span>
+
+                                <h2>
+                                    Live Inspection Line
+                                </h2>
+
+                            </div>
+
+                            <div class="mv-live-status">
+
+                                <span></span>
+
+                                LIVE
+
+                            </div>
+
+                        </div>
+
+                        <div class="mv-live-screen">
+
+                            <div class="mv-live-grid"></div>
+
+                            <div class="mv-object object-one">
+
+                                <span class="mv-object-box"></span>
+
+                                <small>
+                                    PASS
+                                </small>
+
+                            </div>
+
+                            <div class="mv-object object-two">
+
+                                <span class="mv-object-box"></span>
+
+                                <small>
+                                    PASS
+                                </small>
+
+                            </div>
+
+                            <div class="mv-object object-three">
+
+                                <span class="mv-object-box"></span>
+
+                                <small>
+                                    DEFECT
+                                </small>
+
+                            </div>
+
+                            <div class="mv-camera-center">
+
+                                <i class="fa-solid fa-camera"></i>
+
+                                <strong>
+                                    CAM-04
+                                </strong>
+
+                                <span>
+                                    AI VISION ACTIVE
+                                </span>
+
+                            </div>
+
+                            <div class="mv-scan-line"></div>
+
+                            <div class="mv-live-bottom">
+
+                                <span>
+                                    <i class="fa-solid fa-circle"></i>
+                                    Production Line 04
+                                </span>
+
+                                <span>
+                                    FPS 48
+                                </span>
+
+                                <span>
+                                    1920 × 1080
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mv-live-metrics">
+
+                            <div>
+                                <span>
+                                    Objects / Min
+                                </span>
+
+                                <strong>
+                                    126
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>
+                                    Pass Rate
+                                </span>
+
+                                <strong>
+                                    99.2%
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>
+                                    Avg. Processing
+                                </span>
+
+                                <strong>
+                                    84ms
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>
+                                    Model
+                                </span>
+
+                                <strong>
+                                    V-AI 4.8
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mv-panel mv-activity-panel">
+
+                        <div class="mv-panel-header">
+
+                            <div>
+
+                                <span class="mv-panel-kicker">
+                                    RECENT EVENTS
+                                </span>
+
+                                <h2>
+                                    Detection Activity
+                                </h2>
+
+                            </div>
+
+                            <a
+                                href="error.html"
+                                class="mv-view-link"
+                            >
+                                View all
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="mv-activity-list">
+
+                            <div class="mv-activity-item">
+
+                                <div class="mv-activity-icon pass">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="mv-activity-text">
+
+                                    <strong>
+                                        Product Passed
+                                    </strong>
+
+                                    <span>
+                                        CAM-04 · Product #84621
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    2 min
+                                </time>
+
+                            </div>
+
+                            <div class="mv-activity-item">
+
+                                <div class="mv-activity-icon defect">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+
+                                <div class="mv-activity-text">
+
+                                    <strong>
+                                        Surface Defect
+                                    </strong>
+
+                                    <span>
+                                        CAM-07 · Product #84620
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    5 min
+                                </time>
+
+                            </div>
+
+                            <div class="mv-activity-item">
+
+                                <div class="mv-activity-icon pass">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="mv-activity-text">
+
+                                    <strong>
+                                        Product Passed
+                                    </strong>
+
+                                    <span>
+                                        CAM-04 · Product #84619
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    8 min
+                                </time>
+
+                            </div>
+
+                            <div class="mv-activity-item">
+
+                                <div class="mv-activity-icon warning">
+                                    <i class="fa-solid fa-wifi"></i>
+                                </div>
+
+                                <div class="mv-activity-text">
+
+                                    <strong>
+                                        Camera Reconnected
+                                    </strong>
+
+                                    <span>
+                                        CAM-18 · Line 03
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    12 min
+                                </time>
+
+                            </div>
+
+                            <div class="mv-activity-item">
+
+                                <div class="mv-activity-icon pass">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="mv-activity-text">
+
+                                    <strong>
+                                        Product Passed
+                                    </strong>
+
+                                    <span>
+                                        CAM-02 · Product #84616
+                                    </span>
+
+                                </div>
+
+                                <time>
+                                    16 min
+                                </time>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="mv-chart-grid">
+
+                    <div class="mv-panel mv-chart-panel">
+
+                        <div class="mv-panel-header">
+
+                            <div>
+
+                                <span class="mv-panel-kicker">
+                                    QUALITY ANALYTICS
+                                </span>
+
+                                <h2>
+                                    Inspection Performance
+                                </h2>
+
+                            </div>
+
+                            <select
+                                class="mv-period-select"
+                                id="mvChartPeriod"
+                                aria-label="Chart period"
+                            >
+                                <option>
+                                    Last 7 Days
+                                </option>
+
+                                <option>
+                                    Last 30 Days
+                                </option>
+
+                                <option>
+                                    Last 90 Days
+                                </option>
+                            </select>
+
+                        </div>
+
+                        <div class="mv-chart-wrapper">
+                            <canvas id="mvPerformanceChart"></canvas>
+                        </div>
+
+                    </div>
+
+                    <div class="mv-panel mv-defect-panel">
+
+                        <div class="mv-panel-header">
+
+                            <div>
+
+                                <span class="mv-panel-kicker">
+                                    DEFECT ANALYSIS
+                                </span>
+
+                                <h2>
+                                    Defect Distribution
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mv-defect-content">
+
+                            <div class="mv-doughnut-wrapper">
+
+                                <canvas id="mvDefectChart"></canvas>
+
+                                <div class="mv-doughnut-center">
+
+                                    <strong>
+                                        0.8%
+                                    </strong>
+
+                                    <span>
+                                        Total Defect
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="mv-defect-legend">
+
+                                <div>
+
+                                    <span>
+                                        <i class="mv-dot dot-surface"></i>
+                                        Surface
+                                    </span>
+
+                                    <strong>
+                                        42%
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        <i class="mv-dot dot-shape"></i>
+                                        Shape
+                                    </span>
+
+                                    <strong>
+                                        26%
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        <i class="mv-dot dot-color"></i>
+                                        Color
+                                    </span>
+
+                                    <strong>
+                                        18%
+                                    </strong>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        <i class="mv-dot dot-alignment"></i>
+                                        Alignment
+                                    </span>
+
+                                    <strong>
+                                        14%
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="mv-panel mv-camera-panel">
+
+                    <div class="mv-panel-header">
+
+                        <div>
+
+                            <span class="mv-panel-kicker">
+                                DEVICE STATUS
+                            </span>
+
+                            <h2>
+                                Camera Fleet
+                            </h2>
+
+                        </div>
+
+                        <a
+                            href="error.html"
+                            class="mv-view-link"
+                        >
+                            Manage cameras
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="mv-camera-grid">
+
+                        <div class="mv-camera-card">
+
+                            <div class="mv-camera-card-top">
+
+                                <div class="mv-camera-icon online">
+                                    <i class="fa-solid fa-camera"></i>
+                                </div>
+
+                                <span class="mv-device-online">
+                                    ONLINE
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                CAM-01
+                            </strong>
+
+                            <span>
+                                Production Line 01
+                            </span>
+
+                            <div class="mv-camera-progress">
+                                <span style="width: 96%;"></span>
+                            </div>
+
+                            <small>
+                                96% Utilization
+                            </small>
+
+                        </div>
+
+                        <div class="mv-camera-card">
+
+                            <div class="mv-camera-card-top">
+
+                                <div class="mv-camera-icon online">
+                                    <i class="fa-solid fa-camera"></i>
+                                </div>
+
+                                <span class="mv-device-online">
+                                    ONLINE
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                CAM-04
+                            </strong>
+
+                            <span>
+                                Production Line 04
+                            </span>
+
+                            <div class="mv-camera-progress">
+                                <span style="width: 99%;"></span>
+                            </div>
+
+                            <small>
+                                99% Utilization
+                            </small>
+
+                        </div>
+
+                        <div class="mv-camera-card">
+
+                            <div class="mv-camera-card-top">
+
+                                <div class="mv-camera-icon online">
+                                    <i class="fa-solid fa-camera"></i>
+                                </div>
+
+                                <span class="mv-device-online">
+                                    ONLINE
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                CAM-07
+                            </strong>
+
+                            <span>
+                                Quality Line 02
+                            </span>
+
+                            <div class="mv-camera-progress">
+                                <span style="width: 88%;"></span>
+                            </div>
+
+                            <small>
+                                88% Utilization
+                            </small>
+
+                        </div>
+
+                        <div class="mv-camera-card">
+
+                            <div class="mv-camera-card-top">
+
+                                <div class="mv-camera-icon offline">
+                                    <i class="fa-solid fa-camera"></i>
+                                </div>
+
+                                <span class="mv-device-offline">
+                                    OFFLINE
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                CAM-18
+                            </strong>
+
+                            <span>
+                                Production Line 03
+                            </span>
+
+                            <div class="mv-camera-progress">
+                                <span style="width: 32%;"></span>
+                            </div>
+
+                            <small>
+                                Maintenance Required
+                            </small>
+
+                        </div>
+
+                        <div class="mv-camera-card">
+
+                            <div class="mv-camera-card-top">
+
+                                <div class="mv-camera-icon online">
+                                    <i class="fa-solid fa-camera"></i>
+                                </div>
+
+                                <span class="mv-device-online">
+                                    ONLINE
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                CAM-21
+                            </strong>
+
+                            <span>
+                                Assembly Line 05
+                            </span>
+
+                            <div class="mv-camera-progress">
+                                <span style="width: 93%;"></span>
+                            </div>
+
+                            <small>
+                                93% Utilization
+                            </small>
+
+                        </div>
+
+                        <div class="mv-camera-card">
+
+                            <div class="mv-camera-card-top">
+
+                                <div class="mv-camera-icon online">
+                                    <i class="fa-solid fa-camera"></i>
+                                </div>
+
+                                <span class="mv-device-online">
+                                    ONLINE
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                CAM-26
+                            </strong>
+
+                            <span>
+                                Inspection Cell 08
+                            </span>
+
+                            <div class="mv-camera-progress">
+                                <span style="width: 91%;"></span>
+                            </div>
+
+                            <small>
+                                91% Utilization
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="mv-bottom-grid">
+
+                    <div class="mv-panel mv-health-panel">
+
+                        <div class="mv-panel-header">
+
+                            <div>
+
+                                <span class="mv-panel-kicker">
+                                    SYSTEM HEALTH
+                                </span>
+
+                                <h2>
+                                    AI Vision Engine
+                                </h2>
+
+                            </div>
+
+                            <span class="mv-health-badge">
+
+                                <i class="fa-solid fa-circle"></i>
+
+                                Healthy
+
+                            </span>
+
+                        </div>
+
+                        <div class="mv-health-list">
+
+                            <div class="mv-health-row">
+
+                                <div>
+
+                                    <span>
+                                        Vision AI Engine
+                                    </span>
+
+                                    <small>
+                                        Inference service
+                                    </small>
+
+                                </div>
+
+                                <strong>
+                                    99.9%
+                                </strong>
+
+                            </div>
+
+                            <div class="mv-health-row">
+
+                                <div>
+
+                                    <span>
+                                        Image Processing
+                                    </span>
+
+                                    <small>
+                                        Average latency
+                                    </small>
+
+                                </div>
+
+                                <strong>
+                                    84ms
+                                </strong>
+
+                            </div>
+
+                            <div class="mv-health-row">
+
+                                <div>
+
+                                    <span>
+                                        Model Confidence
+                                    </span>
+
+                                    <small>
+                                        Current average
+                                    </small>
+
+                                </div>
+
+                                <strong>
+                                    98.7%
+                                </strong>
+
+                            </div>
+
+                            <div class="mv-health-row">
+
+                                <div>
+
+                                    <span>
+                                        Data Pipeline
+                                    </span>
+
+                                    <small>
+                                        Stream availability
+                                    </small>
+
+                                </div>
+
+                                <strong>
+                                    99.8%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mv-panel mv-quick-panel">
+
+                        <div class="mv-panel-header">
+
+                            <div>
+
+                                <span class="mv-panel-kicker">
+                                    QUICK ACTIONS
+                                </span>
+
+                                <h2>
+                                    Workspace
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mv-quick-actions">
+
+                            <a
+                                href="error.html"
+                                class="mv-quick-action"
+                            >
+
+                                <div>
+                                    <i class="fa-solid fa-video"></i>
+                                </div>
+
+                                <span>
+                                    Live Cameras
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                            <a
+                                href="error.html"
+                                class="mv-quick-action"
+                            >
+
+                                <div>
+                                    <i class="fa-solid fa-file-lines"></i>
+                                </div>
+
+                                <span>
+                                    Generate Report
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                            <a
+                                href="error.html"
+                                class="mv-quick-action"
+                            >
+
+                                <div>
+                                    <i class="fa-solid fa-sliders"></i>
+                                </div>
+
+                                <span>
+                                    Model Settings
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                            <a
+                                href="error.html"
+                                class="mv-quick-action"
+                            >
+
+                                <div>
+                                    <i class="fa-solid fa-bell"></i>
+                                </div>
+
+                                <span>
+                                    Alert Center
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="mv-insight-panel">
+
+                    <div class="mv-insight-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <div class="mv-insight-content">
+
+                        <span>
+                            AI SYSTEM INSIGHT
+                        </span>
+
+                        <h3>
+                            Inspection quality improved during the current production cycle.
+                        </h3>
+
+                        <p>
+                            The vision engine is maintaining high confidence while
+                            defect detection remains below the configured threshold.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="error.html"
+                        class="mv-insight-button"
+                    >
+                        View Analysis
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </section>
+
+                <footer class="mv-dashboard-footer">
+
+                    <span>
+                        © 2026 Stackly. Machine Vision Control Center.
+                    </span>
+
+                    <div>
+
+                        <a href="error.html">
+                            Privacy
+                        </a>
+
+                        <a href="error.html">
+                            Terms
+                        </a>
+
+                        <a href="error.html">
+                            Support
+                        </a>
+
+                    </div>
+
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="machine-vision.js"></script>
+
+</body>
+</html>

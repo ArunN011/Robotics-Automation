@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="contact.css">
+<body>
+    
+
+
+
+
+
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+
+        <a href="index.html" class="navbar-brand brand-logo">
+            <img src="Assets/blacklogo.webp" alt="Robotics Automation Logo">
+        </a>
+
+        <div class="desktop-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link ">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="blog.html" class="nav-link ">Blog</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+        </div>
+
+        <div class="desktop-actions">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="register.html" class="register-btn">Register</a>
+        </div>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+            <i class="bi bi-list"></i>
+        </button>
+
+    </div>
+</nav>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<aside class="mobile-sidebar" id="mobileSidebar">
+
+    <div class="sidebar-top">
+        <a href="index.html" class="brand-logo">
+            <img src="Assets/blacklogo.webp" alt="Robotics Automation Logo">
+        </a>
+
+        <button class="close-btn" id="closeBtn" aria-label="Close menu">
+            <i class="bi bi-x-lg"></i>
+        </button>
+    </div>
+
+    <div class="mobile-menu">
+
+        <a href="index.html" class="mobile-link ">
+            <i class="bi bi-house"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="about.html" class="mobile-link ">
+            <i class="bi bi-info-circle"></i>
+            <span>About</span>
+        </a>
+
+        <a href="services.html" class="mobile-link">
+            <i class="bi bi-cpu"></i>
+            <span>Services</span>
+        </a>
+
+        <a href="blog.html" class="mobile-link">
+            <i class="bi bi-journal-text"></i>
+            <span>Blog</span>
+        </a>
+
+        <a href="contact.html" class="mobile-link active">
+            <i class="bi bi-envelope"></i>
+            <span>Contact</span>
+        </a>
+
+        <div class="mobile-divider"></div>
+
+        <a href="login.html" class="mobile-link">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Login</span>
+        </a>
+
+        <a href="register.html" class="mobile-register">
+            <i class="bi bi-person-plus"></i>
+            <span>Register</span>
+        </a>
+
+    </div>
+
+</aside>
+<section class="contact-page-hero" id="contactHero">
+  <div class="contact-hero-grid"></div>
+
+  <div class="contact-hero-glow contact-glow-one"></div>
+  <div class="contact-hero-glow contact-glow-two"></div>
+
+  <div class="contact-hero-network">
+    <span class="contact-network-line contact-line-one"></span>
+    <span class="contact-network-line contact-line-two"></span>
+    <span class="contact-network-line contact-line-three"></span>
+    <span class="contact-network-line contact-line-four"></span>
+    <span class="contact-network-line contact-line-five"></span>
+
+    <span class="contact-network-dot contact-dot-one"></span>
+    <span class="contact-network-dot contact-dot-two"></span>
+    <span class="contact-network-dot contact-dot-three"></span>
+    <span class="contact-network-dot contact-dot-four"></span>
+    <span class="contact-network-dot contact-dot-five"></span>
+  </div>
+
+  <div class="container">
+    <div class="contact-hero-layout">
+
+      <div class="contact-hero-content">
+        <span class="contact-hero-badge">
+          <i class="fa-solid fa-comments"></i>
+          LET'S CONNECT
+        </span>
+
+        <h1>
+          Contact
+          <strong>Us</strong>
+        </h1>
+
+        <p>
+          Have a robotics, AI, or automation challenge?
+          Connect with our team and let's explore the right intelligent
+          technology solution for your business.
+        </p>
+
+        <div class="contact-hero-breadcrumb">
+          <a href="index.html">Home</a>
+          <i class="fa-solid fa-angles-right"></i>
+          <span>Contact</span>
+        </div>
+      </div>
+
+      <div class="contact-hero-visual">
+        <div class="contact-visual-ring contact-ring-one"></div>
+        <div class="contact-visual-ring contact-ring-two"></div>
+
+        <div class="contact-visual-core">
+          <div class="contact-core-inner">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+        </div>
+
+        <div class="contact-visual-node contact-node-one">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <div class="contact-visual-node contact-node-two">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+
+        <div class="contact-visual-node contact-node-three">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+
+        <div class="contact-visual-node contact-node-four">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+
+        <span class="contact-visual-signal contact-signal-one"></span>
+        <span class="contact-visual-signal contact-signal-two"></span>
+        <span class="contact-visual-signal contact-signal-three"></span>
+        <span class="contact-visual-signal contact-signal-four"></span>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="contact-info-section" id="contactInfo">
+  <div class="contact-info-bg"></div>
+
+  <div class="container">
+    <div class="contact-info-header">
+      <span class="contact-info-label">GET IN TOUCH</span>
+
+      <h2>
+        Let's Start A
+        <strong>Conversation</strong>
+      </h2>
+
+      <p>
+        Have a question about robotics, artificial intelligence, automation,
+        or our services? Reach out to our team and we will get back to you.
+      </p>
+    </div>
+
+    <div class="contact-info-wrapper">
+
+      <div class="contact-info-details">
+
+        <div class="contact-detail-card">
+          <div class="contact-detail-icon">
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+
+          <div class="contact-detail-content">
+            <span>EMAIL US</span>
+            <h3>support@stackly.com</h3>
+            <p>Send us your questions and project requirements.</p>
+            <a href="error.html">
+              Send Email
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-detail-card">
+          <div class="contact-detail-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div class="contact-detail-content">
+            <span>OUR LOCATION</span>
+            <h3>Salem, Tamil Nadu</h3>
+            <p>Connect with our team from our Salem location.</p>
+            <a href="error.html">
+              View Location
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-detail-card">
+          <div class="contact-detail-icon">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+
+          <div class="contact-detail-content">
+            <span>WORKING HOURS</span>
+            <h3>9:30 AM - 6:30 PM</h3>
+            <p>Our team is available during regular working hours.</p>
+            <a href="error.html">
+              Contact During Hours
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-detail-bottom">
+          <div class="contact-detail-bottom-icon">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+
+          <div>
+            <span>QUICK SUPPORT</span>
+            <h3>We Are Here To Help</h3>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="contact-info-form-wrap">
+
+        <div class="contact-form-heading">
+          <span>SEND A MESSAGE</span>
+          <h3>Tell Us About Your Project</h3>
+          <p>
+            Complete the form below and our team can connect with you about
+            your requirements.
+          </p>
+        </div>
+
+        <form class="contact-info-form" id="contactInfoForm" novalidate>
+
+          <div class="contact-form-row">
+            <div class="contact-form-group">
+              <label for="contactName">Full Name</label>
+
+              <div class="contact-input-wrap">
+                <i class="fa-regular fa-user"></i>
+                <input
+                  type="text"
+                  id="contactName"
+                  name="name"
+                  placeholder="Enter your name"
+                  autocomplete="name"
+                >
+              </div>
+            </div>
+
+            <div class="contact-form-group">
+              <label for="contactEmail">Email Address</label>
+
+              <div class="contact-input-wrap">
+                <i class="fa-regular fa-envelope"></i>
+                <input
+                  type="email"
+                  id="contactEmail"
+                  name="email"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-row">
+            <div class="contact-form-group">
+              <label for="contactPhone">Phone Number</label>
+
+              <div class="contact-input-wrap">
+                <i class="fa-solid fa-phone"></i>
+                <input
+                  type="tel"
+                  id="contactPhone"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                  autocomplete="tel"
+                >
+              </div>
+            </div>
+
+            <div class="contact-form-group">
+              <label for="contactService">Service</label>
+
+              <div class="contact-input-wrap contact-select-wrap">
+                <i class="fa-solid fa-gears"></i>
+
+                <select id="contactService" name="service">
+                  <option value="">Select a service</option>
+                  <option value="robotics">Robotic Automation</option>
+                  <option value="ai">Artificial Intelligence</option>
+                  <option value="machine-learning">Machine Learning</option>
+                  <option value="analytics">Predictive Analytics</option>
+                  <option value="vision">Machine Vision</option>
+                  <option value="iot">Industrial IoT</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-group">
+            <label for="contactMessage">Your Message</label>
+
+            <div class="contact-input-wrap contact-textarea-wrap">
+              <i class="fa-regular fa-message"></i>
+
+              <textarea
+                id="contactMessage"
+                name="message"
+                rows="5"
+                placeholder="Tell us about your requirements"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="contact-form-footer">
+            <button type="submit" class="contact-submit-btn">
+              Send Message
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <div class="contact-form-status" id="contactFormStatus"></div>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="contact-map-section" id="contactMap">
+  <div class="contact-map-bg"></div>
+
+  <div class="container">
+    <div class="contact-map-header">
+      <span class="contact-map-label">FIND US</span>
+
+      <h2>
+        Visit Our
+        <strong>Salem Location</strong>
+      </h2>
+
+      <p>
+        Connect with the Stackly team and explore how intelligent robotics,
+        AI, and automation solutions can support your business.
+      </p>
+    </div>
+
+    <div class="contact-map-wrapper">
+
+      <div class="contact-location-card">
+        <div class="contact-location-top">
+          <div class="contact-location-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div>
+            <span>STACKLY OFFICE</span>
+            <h3>Salem, Tamil Nadu</h3>
+          </div>
+        </div>
+
+        <div class="contact-location-info">
+          <div class="contact-location-item">
+            <div class="contact-location-item-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+              <span>ADDRESS</span>
+              <p>
+                Chinna Thirupathi Kovil Street,
+                Salem, Tamil Nadu 636008
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-location-item">
+            <div class="contact-location-item-icon">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+
+            <div>
+              <span>WORKING HOURS</span>
+              <p>9:30 AM - 6:30 PM</p>
+            </div>
+          </div>
+
+          <div class="contact-location-item">
+            <div class="contact-location-item-icon">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+
+            <div>
+              <span>EMAIL</span>
+              <p>support@stackly.com</p>
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="error.html"
+         
+          class="contact-location-btn"
+        >
+          Get Directions
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
+      <div class="contact-map-box">
+        <div class="contact-map-overlay">
+          <div class="contact-map-badge">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Stackly · Salem</span>
+          </div>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps?q=Stackly%2C%20Chinna%20Thirupathi%20Kovil%20Street%2C%20Salem%2C%20Tamil%20Nadu%20636008&output=embed"
+          title="Stackly Salem Location"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="contact-social-section" id="contactSocial">
+  <div class="contact-social-bg"></div>
+
+  <div class="container">
+    <div class="contact-social-header">
+      <span class="contact-social-label">FOLLOW STACKLY</span>
+
+      <h2>
+        Stay Connected With
+        <strong>Our Technology Community</strong>
+      </h2>
+
+      <p>
+        Follow us for robotics insights, artificial intelligence updates,
+        automation ideas, technology news, and the latest Stackly updates.
+      </p>
+    </div>
+
+    <div class="contact-social-grid">
+
+      <a href="error.html" class="contact-social-card">
+        <div class="contact-social-icon">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+
+        <div class="contact-social-content">
+          <span>FOLLOW US ON</span>
+          <h3>Instagram</h3>
+          <p>Explore our latest technology visuals and updates.</p>
+        </div>
+
+        <div class="contact-social-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+
+      <a href="error.html" class="contact-social-card">
+        <div class="contact-social-icon">
+          <i class="fa-brands fa-facebook-f"></i>
+        </div>
+
+        <div class="contact-social-content">
+          <span>CONNECT ON</span>
+          <h3>Facebook</h3>
+          <p>Keep up with our latest news, stories, and announcements.</p>
+        </div>
+
+        <div class="contact-social-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+
+      <a href="error.html" class="contact-social-card">
+        <div class="contact-social-icon">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+
+        <div class="contact-social-content">
+          <span>CONNECT ON</span>
+          <h3>LinkedIn</h3>
+          <p>Follow our professional updates and technology insights.</p>
+        </div>
+
+        <div class="contact-social-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+
+      <a href="error.html" class="contact-social-card">
+        <div class="contact-social-icon">
+          <i class="fa-brands fa-x-twitter"></i>
+        </div>
+
+        <div class="contact-social-content">
+          <span>FOLLOW US ON</span>
+          <h3>X</h3>
+          <p>Get quick updates, conversations, and technology highlights.</p>
+        </div>
+
+        <div class="contact-social-arrow">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="contact-social-bottom">
+      <div class="contact-social-bottom-icon">
+        <i class="fa-solid fa-share-nodes"></i>
+      </div>
+
+      <div class="contact-social-bottom-content">
+        <span>STAY IN THE LOOP</span>
+        <h3>Follow Stackly Across Social Platforms</h3>
+      </div>
+
+      <div class="contact-social-bottom-links">
+        <a href="error.html" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="error.html" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="error.html" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a href="error.html" aria-label="X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-faq-section" id="contactFaq">
+  <div class="contact-faq-bg"></div>
+
+  <div class="container">
+    <div class="contact-faq-header">
+      <span class="contact-faq-label">FAQ</span>
+
+      <h2>
+        Frequently Asked
+        <strong>Questions</strong>
+      </h2>
+
+      <p>
+        Find answers to common questions about our services, robotics,
+        artificial intelligence, automation, and getting in touch with our team.
+      </p>
+    </div>
+
+    <div class="contact-faq-wrapper">
+
+      <div class="contact-faq-intro">
+        <div class="contact-faq-intro-icon">
+          <i class="fa-solid fa-circle-question"></i>
+        </div>
+
+        <span>NEED MORE HELP?</span>
+
+        <h3>
+          Our Team Is Ready
+          To Help You
+        </h3>
+
+        <p>
+          Have a specific question about our solutions or services?
+          Reach out to us and our team will help you with the right information.
+        </p>
+
+        <a href="error.html" class="contact-faq-btn">
+          Contact Our Team
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <div class="contact-faq-mini">
+          <i class="fa-solid fa-headset"></i>
+          <span>Support available during 9:30 AM - 6:30 PM</span>
+        </div>
+      </div>
+
+      <div class="contact-faq-list">
+
+        <div class="contact-faq-item active">
+          <button class="contact-faq-question" type="button">
+            <span>What services does Stackly provide?</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <div class="contact-faq-answer">
+            <p>
+              Stackly provides robotics, automation, artificial intelligence,
+              machine learning, predictive analytics, machine vision, and
+              connected technology solutions.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-faq-item">
+          <button class="contact-faq-question" type="button">
+            <span>Can you develop a custom solution for my business?</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <div class="contact-faq-answer">
+            <p>
+              Our solutions can be planned around specific business
+              requirements, workflows, technology environments, and operational
+              goals.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-faq-item">
+          <button class="contact-faq-question" type="button">
+            <span>How can I contact the Stackly team?</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <div class="contact-faq-answer">
+            <p>
+              You can contact the team using the contact form or by sending an
+              email to support@stackly.com.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-faq-item">
+          <button class="contact-faq-question" type="button">
+            <span>Where is the Stackly office located?</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <div class="contact-faq-answer">
+            <p>
+              The Stackly location shown on this website is in Salem,
+              Tamil Nadu. Please use the map section for location details.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-faq-item">
+          <button class="contact-faq-question" type="button">
+            <span>What are your working hours?</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <div class="contact-faq-answer">
+            <p>
+              Our stated working hours are 9:30 AM to 6:30 PM.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-faq-item">
+          <button class="contact-faq-question" type="button">
+            <span>Can your solutions integrate with existing systems?</span>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <div class="contact-faq-answer">
+            <p>
+              Automation and AI solutions can be designed with existing
+              applications, databases, devices, and business workflows in mind.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="contact-faq-bottom">
+      <div class="contact-faq-bottom-icon">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+
+      <div class="contact-faq-bottom-content">
+        <span>STILL HAVE A QUESTION?</span>
+        <h3>Send Us A Message At support@stackly.com</h3>
+      </div>
+
+      <a href="error.html" class="contact-faq-bottom-btn">
+        Email Us
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="robot-footer">
+    <div class="robot-footer-top">
+        <div class="container">
+
+            <div class="row g-5">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="robot-footer-brand">
+
+                        <a href="index.html" class="robot-footer-logo">
+                            <img src="Assets/blacklogo.webp" alt="Robotics Automation Logo">
+                          
+                        </a>
+
+                        <p>
+                            Building smarter businesses through robotics,
+                            artificial intelligence and advanced automation
+                            technologies.
+                        </p>
+
+                        <a href="error.html" class="robot-footer-read">
+                            Discover More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="robot-footer-column">
+
+                        <h3>Quick Links</h3>
+
+                        <a href="index.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Home
+                        </a>
+
+                        <a href="about.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            About
+                        </a>
+
+                        <a href="services.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Services
+                        </a>
+
+                        <a href="blog.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Blog
+                        </a>
+
+                        <a href="contact.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Contact
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="robot-footer-column">
+
+                        <h3>Our Services</h3>
+
+                        <a href="error.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Industrial Robotics
+                        </a>
+
+                        <a href="error.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Smart Automation
+                        </a>
+
+                        <a href="error.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Artificial Intelligence
+                        </a>
+
+                        <a href="error.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Machine Vision
+                        </a>
+
+                        <a href="error.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Industrial IoT
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="robot-footer-column">
+
+                        <h3>Contact Us</h3>
+
+                        <a href="error.html" class="robot-footer-contact">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>hello@stackly.com</span>
+                        </a>
+
+                        <a href="error.html" class="robot-footer-contact">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </a>
+
+                        <a href="error.html" class="robot-footer-contact">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Chennai, Tamil Nadu, India</span>
+                        </a>
+
+                        <a href="error.html" class="robot-footer-contact">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Mon - Fri : 09:00 - 18:00</span>
+                        </a>
+
+                        <div class="robot-footer-socials">
+
+                            <a href="error.html" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="X">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="robot-footer-bottom">
+        <div class="container">
+
+            <div class="robot-footer-bottom-inner">
+
+                <p>
+                    &copy; 2026 RoboTech. All Rights Reserved.
+                </p>
+
+                <div class="robot-footer-legal">
+
+                    <a href="error.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="error.html">
+                        Terms & Conditions
+                    </a>
+
+                    <a href="error.html">
+                        Cookie Policy
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="nav.js"></script>
+<script src="contact.js"></script>
+</body>
+</head>

@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Admin Settings</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    >
+
+    <link
+        rel="stylesheet"
+        href="admin-setting.css"
+    >
+</head>
+
+<body>
+
+    <div class="dashboard-app">
+
+        <aside
+            class="dashboard-sidebar"
+            id="dashboardSidebar"
+        >
+
+            <div class="sidebar-logo">
+                <a href="admin-dashboard.html">
+                    <img
+                        src="Assets/blacklogo.webp"
+                        alt="Stackly"
+                    >
+                </a>
+            </div>
+
+            <div class="sidebar-user">
+
+                <div class="sidebar-avatar">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+
+                <div class="sidebar-user-text">
+
+                    <strong id="sidebarUserName">
+                        Admin
+                    </strong>
+
+                    <span id="sidebarUserRole">
+                        Administrator
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="sidebar-menu">
+
+                <span class="sidebar-heading">
+                    MAIN MENU
+                </span>
+
+                <a
+                    href="admin-dashboard.html"
+                    class="sidebar-link"
+                >
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+            </div>
+
+            <div class="sidebar-menu">
+
+                <span class="sidebar-heading">
+                    MANAGEMENT
+                </span>
+
+                <a
+                    href="admin-alert.html"
+                    class="sidebar-link"
+                >
+                    <i class="bi bi-bell-fill"></i>
+                    <span>Alerts</span>
+                </a>
+
+            </div>
+
+            <div class="sidebar-menu">
+
+                <span class="sidebar-heading">
+                    ACCOUNT
+                </span>
+
+                <a
+                    href="admin-setting.html"
+                    class="sidebar-link active"
+                >
+                    <i class="bi bi-gear-fill"></i>
+                    <span>Settings</span>
+                </a>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <a
+                    href="login.html"
+                    class="sidebar-link logout-link"
+                    id="logoutButton"
+                >
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+        <div
+            class="sidebar-overlay"
+            id="sidebarOverlay"
+        ></div>
+
+        <main class="dashboard-main">
+
+            <header class="dashboard-header">
+
+                <div class="header-left">
+
+                    <button
+                        type="button"
+                        class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        aria-label="Open navigation"
+                        aria-expanded="false"
+                    >
+                        <i class="bi bi-list"></i>
+                    </button>
+
+                    <a
+                        href="admin-dashboard.html"
+                        class="mobile-brand"
+                    >
+                        <img
+                            src="Assets/blacklogo.webp"
+                            alt="Stackly"
+                        >
+                    </a>
+
+                    <div class="desktop-page-heading">
+
+                        <span>
+                            ACCOUNT
+                        </span>
+
+                        <h1>
+                            Admin Settings
+                        </h1>
+
+                    </div>
+
+                </div>
+
+                <div class="header-right">
+
+                    <a
+                        href="error.html"
+                        class="header-icon-button"
+                        aria-label="Search"
+                    >
+                        <i class="bi bi-search"></i>
+                    </a>
+
+                    <a
+                        href="admin-alert.html"
+                        class="header-icon-button notification-button"
+                        aria-label="Notifications"
+                    >
+                        <i class="bi bi-bell"></i>
+                        <span></span>
+                    </a>
+
+                    <a
+                        href="admin-setting.html"
+                        class="header-user"
+                    >
+
+                        <div class="header-user-avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+
+                        <div class="header-user-copy">
+
+                            <strong id="headerUserName">
+                                Admin
+                            </strong>
+
+                            <small id="headerUserRole">
+                                Administrator
+                            </small>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+            <div class="dashboard-content">
+
+                <section class="settings-hero">
+
+                    <div class="settings-hero-copy">
+
+                        <span class="settings-eyebrow">
+                            <i class="bi bi-sliders2"></i>
+                            SYSTEM CONFIGURATION
+                        </span>
+
+                        <h2>
+                            Manage Your
+                            <strong>Platform Settings</strong>
+                        </h2>
+
+                        <p>
+                            Configure administrator preferences, security,
+                            notifications, system behavior and platform controls
+                            from one centralized workspace.
+                        </p>
+
+                    </div>
+
+                    <div class="settings-hero-icon">
+                        <i class="bi bi-gear-wide-connected"></i>
+                    </div>
+
+                </section>
+
+                <section class="settings-layout">
+
+                    <div class="settings-navigation">
+
+                        <div class="settings-nav-card">
+
+                            <span class="settings-nav-title">
+                                SETTINGS
+                            </span>
+
+                            <button
+                                type="button"
+                                class="settings-nav-link active"
+                                data-section="general"
+                            >
+                                <i class="bi bi-grid-fill"></i>
+                                <span>General</span>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="settings-nav-link"
+                                data-section="security"
+                            >
+                                <i class="bi bi-shield-lock-fill"></i>
+                                <span>Security</span>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="settings-nav-link"
+                                data-section="notifications"
+                            >
+                                <i class="bi bi-bell-fill"></i>
+                                <span>Notifications</span>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="settings-nav-link"
+                                data-section="system"
+                            >
+                                <i class="bi bi-cpu-fill"></i>
+                                <span>System</span>
+                            </button>
+
+                            <button
+                                type="button"
+                                class="settings-nav-link"
+                                data-section="access"
+                            >
+                                <i class="bi bi-person-lock"></i>
+                                <span>Access Control</span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="settings-panels">
+
+                        <section
+                            class="settings-panel active"
+                            id="general"
+                        >
+
+                            <div class="settings-card">
+
+                                <div class="settings-card-heading">
+
+                                    <div>
+
+                                        <span>
+                                            GENERAL
+                                        </span>
+
+                                        <h3>
+                                            General Configuration
+                                        </h3>
+
+                                    </div>
+
+                                    <div class="settings-icon">
+                                        <i class="bi bi-grid-fill"></i>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-grid">
+
+                                    <div class="setting-field">
+
+                                        <label for="platformName">
+                                            Platform Name
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="platformName"
+                                            value="Stackly"
+                                        >
+
+                                    </div>
+
+                                    <div class="setting-field">
+
+                                        <label for="workspaceName">
+                                            Workspace Name
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="workspaceName"
+                                            value="Stackly Automation Center"
+                                        >
+
+                                    </div>
+
+                                    <div class="setting-field">
+
+                                        <label for="adminEmail">
+                                            Administrator Email
+                                        </label>
+
+                                        <input
+                                            type="email"
+                                            id="adminEmail"
+                                            value="admin@stackly.com"
+                                        >
+
+                                    </div>
+
+                                    <div class="setting-field">
+
+                                        <label for="timezone">
+                                            Time Zone
+                                        </label>
+
+                                        <select id="timezone">
+
+                                            <option>
+                                                Asia/Kolkata
+                                            </option>
+
+                                            <option>
+                                                UTC
+                                            </option>
+
+                                            <option>
+                                                America/New_York
+                                            </option>
+
+                                            <option>
+                                                Europe/London
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="setting-description">
+
+                                    <i class="bi bi-info-circle-fill"></i>
+
+                                    <span>
+                                        These configuration options control
+                                        your main administration workspace.
+                                    </span>
+
+                                </div>
+
+                                <div class="settings-save-row">
+
+                                    <button
+                                        type="button"
+                                        class="save-button"
+                                        data-save="General settings saved"
+                                    >
+                                        <i class="bi bi-check2"></i>
+                                        Save Changes
+                                    </button>
+
+                                </div>
+
+                                <div
+                                    class="save-message"
+                                    id="generalMessage"
+                                ></div>
+
+                            </div>
+
+                        </section>
+
+                        <section
+                            class="settings-panel"
+                            id="security"
+                        >
+
+                            <div class="settings-card">
+
+                                <div class="settings-card-heading">
+
+                                    <div>
+
+                                        <span>
+                                            SECURITY
+                                        </span>
+
+                                        <h3>
+                                            Security Configuration
+                                        </h3>
+
+                                    </div>
+
+                                    <div class="settings-icon security">
+                                        <i class="bi bi-shield-lock-fill"></i>
+                                    </div>
+
+                                </div>
+
+                                <div class="security-setting-list">
+
+                                    <div class="security-setting">
+
+                                        <div class="security-setting-icon">
+                                            <i class="bi bi-key-fill"></i>
+                                        </div>
+
+                                        <div class="security-setting-copy">
+
+                                            <strong>
+                                                Password Protection
+                                            </strong>
+
+                                            <span>
+                                                Require strong passwords for
+                                                all administrator accounts.
+                                            </span>
+
+                                        </div>
+
+                                        <label class="toggle">
+
+                                            <input
+                                                type="checkbox"
+                                                id="strongPassword"
+                                                checked
+                                            >
+
+                                            <span></span>
+
+                                        </label>
+
+                                    </div>
+
+                                    <div class="security-setting">
+
+                                        <div class="security-setting-icon">
+                                            <i class="bi bi-shield-check"></i>
+                                        </div>
+
+                                        <div class="security-setting-copy">
+
+                                            <strong>
+                                                Two-Factor Authentication
+                                            </strong>
+
+                                            <span>
+                                                Add an additional verification
+                                                layer for administrator access.
+                                            </span>
+
+                                        </div>
+
+                                        <label class="toggle">
+
+                                            <input
+                                                type="checkbox"
+                                                id="twoFactor"
+                                                checked
+                                            >
+
+                                            <span></span>
+
+                                        </label>
+
+                                    </div>
+
+                                    <div class="security-setting">
+
+                                        <div class="security-setting-icon">
+                                            <i class="bi bi-clock-history"></i>
+                                        </div>
+
+                                        <div class="security-setting-copy">
+
+                                            <strong>
+                                                Session Timeout
+                                            </strong>
+
+                                            <span>
+                                                Automatically end inactive
+                                                administration sessions.
+                                            </span>
+
+                                        </div>
+
+                                        <select
+                                            class="small-select"
+                                            id="sessionTimeout"
+                                        >
+                                            <option>
+                                                15 Minutes
+                                            </option>
+
+                                            <option selected>
+                                                30 Minutes
+                                            </option>
+
+                                            <option>
+                                                60 Minutes
+                                            </option>
+
+                                            <option>
+                                                120 Minutes
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="settings-save-row">
+
+                                    <button
+                                        type="button"
+                                        class="save-button"
+                                        data-save="Security settings saved"
+                                    >
+                                        <i class="bi bi-check2"></i>
+                                        Save Security
+                                    </button>
+
+                                </div>
+
+                                <div
+                                    class="save-message"
+                                    id="securityMessage"
+                                ></div>
+
+                            </div>
+
+                        </section>
+
+                        <section
+                            class="settings-panel"
+                            id="notifications"
+                        >
+
+                            <div class="settings-card">
+
+                                <div class="settings-card-heading">
+
+                                    <div>
+
+                                        <span>
+                                            NOTIFICATIONS
+                                        </span>
+
+                                        <h3>
+                                            Notification Preferences
+                                        </h3>
+
+                                    </div>
+
+                                    <div class="settings-icon">
+                                        <i class="bi bi-bell-fill"></i>
+                                    </div>
+
+                                </div>
+
+                                <div class="notification-settings">
+
+                                    <div class="notification-setting">
+
+                                        <div>
+
+                                            <strong>
+                                                Critical Alerts
+                                            </strong>
+
+                                            <span>
+                                                Receive immediate alerts for
+                                                critical infrastructure events.
+                                            </span>
+
+                                        </div>
+
+                                        <label class="toggle">
+
+                                            <input
+                                                type="checkbox"
+                                                id="criticalAlerts"
+                                                checked
+                                            >
+
+                                            <span></span>
+
+                                        </label>
+
+                                    </div>
+
+                                    <div class="notification-setting">
+
+                                        <div>
+
+                                            <strong>
+                                                Machine Vision Alerts
+                                            </strong>
+
+                                            <span>
+                                                Receive camera and inspection
+                                                system notifications.
+                                            </span>
+
+                                        </div>
+
+                                        <label class="toggle">
+
+                                            <input
+                                                type="checkbox"
+                                                id="visionAlerts"
+                                                checked
+                                            >
+
+                                            <span></span>
+
+                                        </label>
+
+                                    </div>
+
+                                    <div class="notification-setting">
+
+                                        <div>
+
+                                            <strong>
+                                                System Updates
+                                            </strong>
+
+                                            <span>
+                                                Receive information about system
+                                                maintenance and updates.
+                                            </span>
+
+                                        </div>
+
+                                        <label class="toggle">
+
+                                            <input
+                                                type="checkbox"
+                                                id="systemUpdates"
+                                            >
+
+                                            <span></span>
+
+                                        </label>
+
+                                    </div>
+
+                                    <div class="notification-setting">
+
+                                        <div>
+
+                                            <strong>
+                                                Weekly Reports
+                                            </strong>
+
+                                            <span>
+                                                Receive automated weekly
+                                                performance summaries.
+                                            </span>
+
+                                        </div>
+
+                                        <label class="toggle">
+
+                                            <input
+                                                type="checkbox"
+                                                id="weeklyReports"
+                                                checked
+                                            >
+
+                                            <span></span>
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="settings-save-row">
+
+                                    <button
+                                        type="button"
+                                        class="save-button"
+                                        data-save="Notification preferences saved"
+                                    >
+                                        <i class="bi bi-check2"></i>
+                                        Save Preferences
+                                    </button>
+
+                                </div>
+
+                                <div
+                                    class="save-message"
+                                    id="notificationsMessage"
+                                ></div>
+
+                            </div>
+
+                        </section>
+
+                        <section
+                            class="settings-panel"
+                            id="system"
+                        >
+
+                            <div class="settings-card">
+
+                                <div class="settings-card-heading">
+
+                                    <div>
+
+                                        <span>
+                                            SYSTEM
+                                        </span>
+
+                                        <h3>
+                                            System Configuration
+                                        </h3>
+
+                                    </div>
+
+                                    <div class="settings-icon">
+                                        <i class="bi bi-cpu-fill"></i>
+                                    </div>
+
+                                </div>
+
+                                <div class="system-status-grid">
+
+                                    <div class="system-status-card">
+
+                                        <div class="system-status-icon">
+                                            <i class="bi bi-cpu-fill"></i>
+                                        </div>
+
+                                        <span>
+                                            AI ENGINE
+                                        </span>
+
+                                        <strong>
+                                            99.9%
+                                        </strong>
+
+                                        <small>
+                                            Operational
+                                        </small>
+
+                                    </div>
+
+                                    <div class="system-status-card">
+
+                                        <div class="system-status-icon">
+                                            <i class="bi bi-eye-fill"></i>
+                                        </div>
+
+                                        <span>
+                                            VISION
+                                        </span>
+
+                                        <strong>
+                                            98.7%
+                                        </strong>
+
+                                        <small>
+                                            Operational
+                                        </small>
+
+                                    </div>
+
+                                    <div class="system-status-card">
+
+                                        <div class="system-status-icon">
+                                            <i class="bi bi-database-fill"></i>
+                                        </div>
+
+                                        <span>
+                                            DATA
+                                        </span>
+
+                                        <strong>
+                                            99.8%
+                                        </strong>
+
+                                        <small>
+                                            Operational
+                                        </small>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="system-options">
+
+                                    <div class="system-option">
+
+                                        <div>
+
+                                            <strong>
+                                                Automatic Updates
+                                            </strong>
+
+                                            <span>
+                                                Keep system components updated
+                                                automatically.
+                                            </span>
+
+                                        </div>
+
+                                        <label class="toggle">
+
+                                            <input
+                                                type="checkbox"
+                                                id="autoUpdates"
+                                                checked
+                                            >
+
+                                            <span></span>
+
+                                        </label>
+
+                                    </div>
+
+                                    <div class="system-option">
+
+                                        <div>
+
+                                            <strong>
+                                                Maintenance Mode
+                                            </strong>
+
+                                            <span>
+                                                Temporarily restrict platform
+                                                access during maintenance.
+                                            </span>
+
+                                        </div>
+
+                                        <label class="toggle">
+
+                                            <input
+                                                type="checkbox"
+                                                id="maintenanceMode"
+                                            >
+
+                                            <span></span>
+
+                                        </label>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="settings-save-row">
+
+                                    <button
+                                        type="button"
+                                        class="save-button"
+                                        data-save="System settings saved"
+                                    >
+                                        <i class="bi bi-check2"></i>
+                                        Save System Settings
+                                    </button>
+
+                                </div>
+
+                                <div
+                                    class="save-message"
+                                    id="systemMessage"
+                                ></div>
+
+                            </div>
+
+                        </section>
+
+                        <section
+                            class="settings-panel"
+                            id="access"
+                        >
+
+                            <div class="settings-card">
+
+                                <div class="settings-card-heading">
+
+                                    <div>
+
+                                        <span>
+                                            ACCESS CONTROL
+                                        </span>
+
+                                        <h3>
+                                            Administrator Access
+                                        </h3>
+
+                                    </div>
+
+                                    <div class="settings-icon">
+                                        <i class="bi bi-person-lock"></i>
+                                    </div>
+
+                                </div>
+
+                                <div class="access-info">
+
+                                    <div class="access-profile">
+
+                                        <div class="access-avatar">
+                                            <i class="bi bi-person-fill"></i>
+                                        </div>
+
+                                        <div>
+
+                                            <strong id="accessUserName">
+                                                Admin
+                                            </strong>
+
+                                            <span>
+                                                Administrator
+                                            </span>
+
+                                        </div>
+
+                                        <div class="access-status">
+                                            <i class="bi bi-circle-fill"></i>
+                                            Active
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="access-permissions">
+
+                                    <div class="permission-row">
+
+                                        <div>
+
+                                            <strong>
+                                                User Management
+                                            </strong>
+
+                                            <span>
+                                                Create, modify and manage
+                                                workspace users.
+                                            </span>
+
+                                        </div>
+
+                                        <span class="permission-badge">
+                                            Full Access
+                                        </span>
+
+                                    </div>
+
+                                    <div class="permission-row">
+
+                                        <div>
+
+                                            <strong>
+                                                System Monitoring
+                                            </strong>
+
+                                            <span>
+                                                Monitor automation and
+                                                machine vision systems.
+                                            </span>
+
+                                        </div>
+
+                                        <span class="permission-badge">
+                                            Full Access
+                                        </span>
+
+                                    </div>
+
+                                    <div class="permission-row">
+
+                                        <div>
+
+                                            <strong>
+                                                Alert Management
+                                            </strong>
+
+                                            <span>
+                                                Review and manage operational
+                                                system alerts.
+                                            </span>
+
+                                        </div>
+
+                                        <span class="permission-badge">
+                                            Full Access
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="access-note">
+
+                                    <i class="bi bi-shield-check"></i>
+
+                                    <span>
+                                        Administrator permissions are controlled
+                                        by the platform access policy.
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    </div>
+
+                </section>
+
+                <section class="settings-insight">
+
+                    <div class="settings-insight-icon">
+                        <i class="bi bi-info-circle-fill"></i>
+                    </div>
+
+                    <div class="settings-insight-copy">
+
+                        <span>
+                            SYSTEM INFORMATION
+                        </span>
+
+                        <strong>
+                            Platform configuration is synchronized with
+                            the current administrator workspace.
+                        </strong>
+
+                        <p>
+                            Changes to security and system settings may
+                            affect administrator access and platform behavior.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="error.html"
+                        class="settings-insight-link"
+                    >
+                        View system details
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </section>
+
+                <footer class="dashboard-footer">
+
+                    <span>
+                        © 2026 Stackly. All rights reserved.
+                    </span>
+
+                    <div>
+
+                        <a href="error.html">
+                            Privacy
+                        </a>
+
+                        <a href="error.html">
+                            Terms
+                        </a>
+
+                        <a href="error.html">
+                            Support
+                        </a>
+
+                    </div>
+
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="admin-setting.js"></script>
+
+</body>
+</html>

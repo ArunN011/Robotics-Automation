@@ -1,0 +1,1079 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #eef7f8;
+  color: #06172b;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  max-width: 100%;
+}
+
+.robot-register-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 88px 20px 35px;
+  background:
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(42, 213, 238, 0.1),
+      transparent 23%
+    ),
+    radial-gradient(
+      circle at 88% 83%,
+      rgba(42, 213, 238, 0.08),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #f9fcfd 0%,
+      #eef7f8 52%,
+      #edf3f8 100%
+    );
+  overflow-x: clip; 
+  overflow-y: visible;
+  isolation: isolate;
+}
+
+.robot-register-grid {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(6, 23, 43, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 23, 43, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.7;
+  z-index: -4;
+  pointer-events: none;
+}
+
+.robot-register-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: -3;
+}
+
+.robot-register-glow-one {
+  width: 320px;
+  height: 320px;
+  left: -80px;
+  top: -80px;
+  background: rgba(42, 213, 238, 0.12);
+}
+
+.robot-register-glow-two {
+  width: 300px;
+  height: 300px;
+  right: -80px;
+  bottom: -80px;
+  background: rgba(42, 213, 238, 0.1);
+}
+
+.robot-register-back {
+  position: absolute;
+  top: 24px;
+  left: 20px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  color: #0f3552;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.robot-register-back i {
+  color: #2ad5ee;
+  font-size: 13px;
+  transition: transform 0.3s ease;
+}
+
+.robot-register-back:hover {
+  color: #2ad5ee;
+  transform: translateX(2px);
+}
+
+.robot-register-back:hover i {
+  transform: translateX(-3px);
+}
+
+.robot-register-floating {
+  position: absolute;
+  z-index: -1;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(42, 213, 238, 0.15);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.75);
+  color: #2ad5ee;
+  box-shadow: 0 12px 30px rgba(6, 23, 43, 0.06);
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+}
+
+.robot-register-floating i {
+  font-size: 18px;
+}
+
+.register-float-one {
+  top: 24%;
+  left: 4%;
+}
+
+.register-float-two {
+  left: 2%;
+  top: 62%;
+}
+
+.register-float-three {
+  right: 4%;
+  top: 20%;
+}
+
+.robot-register-layout {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(400px, 0.94fr);
+  align-items: center;
+  gap: 40px;
+}
+
+.robot-register-visual {
+  position: relative;
+  width: 100%;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.robot-register-visual-content {
+  position: relative;
+  z-index: 6;
+  width: 100%;
+  max-width: 590px;
+}
+
+.robot-register-visual-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  max-width: 100%;
+  margin-bottom: 19px;
+  padding: 8px 14px;
+  border: 1px solid rgba(42, 213, 238, 0.25);
+  border-radius: 50px;
+  background: rgba(42, 213, 238, 0.08);
+  color: #1595ac;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.robot-register-visual-label i {
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+.robot-register-visual-content h1 {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 0 19px;
+  color: #06172b;
+  font-size: clamp(36px, 4.5vw, 64px);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  word-break: break-word;
+}
+
+.robot-register-visual-content h1 strong {
+  display: block;
+  color: #1a9eb6;
+}
+
+.robot-register-visual-content > p {
+  width: 100%;
+  max-width: 530px;
+  margin: 0 0 31px;
+  color: #657985;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.robot-register-features {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 460px;
+}
+
+.robot-register-feature {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.robot-register-feature-icon {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #d8f2f5;
+  color: #06172b;
+}
+
+.robot-register-feature-icon i {
+  font-size: 16px;
+}
+
+.robot-register-feature h3 {
+  margin: 0 0 2px;
+  color: #06172b;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.robot-register-feature span {
+  color: #7c8d96;
+  font-size: 12px;
+}
+
+.robot-register-orbit {
+  position: absolute;
+  width: min(400px, 60%);
+  aspect-ratio: 1;
+  right: -2%;
+  bottom: -2%;
+  pointer-events: none;
+}
+
+.register-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid rgba(42, 213, 238, 0.16);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.register-orbit-large {
+  width: 100%;
+  height: 100%;
+}
+
+.register-orbit-medium {
+  width: 75%;
+  height: 75%;
+  border-style: dashed;
+}
+
+.register-orbit-small {
+  width: 50%;
+  height: 50%;
+}
+
+.robot-register-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(42, 213, 238, 0.25);
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(42, 213, 238, 0.16),
+      rgba(255, 255, 255, 0.82) 72%
+    );
+  box-shadow:
+    0 0 35px rgba(42, 213, 238, 0.14),
+    inset 0 0 25px rgba(42, 213, 238, 0.08);
+}
+
+.robot-register-core-inner {
+  width: 88px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(42, 213, 238, 0.18);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.robot-register-core-inner i {
+  color: #168ea4;
+  font-size: 34px;
+}
+
+.robot-register-node {
+  position: absolute;
+  z-index: 3;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(42, 213, 238, 0.2);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  color: #168ea4;
+  box-shadow: 0 10px 25px rgba(6, 23, 43, 0.07);
+}
+
+.robot-register-node i {
+  font-size: 13px;
+}
+
+.register-node-one {
+  top: 4%;
+  left: 20%;
+}
+
+.register-node-two {
+  top: 24%;
+  right: 0;
+}
+
+.register-node-three {
+  right: 8%;
+  bottom: 10%;
+}
+
+.register-node-four {
+  bottom: 4%;
+  left: 12%;
+}
+
+.robot-register-card-wrap {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.robot-register-card {
+  width: 100%;
+  max-width: 560px;
+  padding: 35px 36px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow:
+    0 25px 60px rgba(6, 23, 43, 0.09),
+    0 5px 20px rgba(6, 23, 43, 0.03);
+  backdrop-filter: blur(10px);
+}
+
+.robot-register-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 17px;
+}
+
+.robot-register-brand a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.robot-register-brand img {
+  width: auto;
+  max-width: 160px;
+  max-height: 50px;
+  object-fit: contain;
+  filter: brightness(0);
+}
+
+.robot-register-heading {
+  width: 100%;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.robot-register-heading > span {
+  display: block;
+  margin-bottom: 7px;
+  color: #5472f2;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+}
+
+.robot-register-heading h2 {
+  margin: 0 0 6px;
+  color: #10182f;
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+}
+
+.robot-register-heading p {
+  width: 100%;
+  max-width: 390px;
+  margin: 0 auto;
+  color: #8790a5;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.robot-register-role-heading {
+  margin-bottom: 7px;
+}
+
+.robot-register-role-heading label {
+  color: #293149;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.robot-register-role-selector {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.robot-register-role {
+  position: relative;
+  width: 100%;
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #e4e1ee;
+  border-radius: 13px;
+  background: #fbfbfe;
+  color: #27304b;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.robot-register-role:hover {
+  transform: translateY(-2px);
+}
+
+.robot-register-role.active {
+  border-color: #bba9ff;
+  background: #f8f5ff;
+  box-shadow: 0 8px 22px rgba(113, 70, 238, 0.08);
+}
+
+.robot-register-role-icon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #ede9ff;
+  color: #7246ec;
+}
+
+.robot-register-role.active .robot-register-role-icon {
+  background: #7542ea;
+  color: #ffffff;
+}
+
+.robot-register-role-icon i {
+  font-size: 14px;
+}
+
+.robot-register-role-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.robot-register-role-content strong {
+  display: block;
+  margin-bottom: 2px;
+  color: #242b42;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.robot-register-role-content small {
+  display: block;
+  color: #9198aa;
+  font-size: 8.5px;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.robot-register-role-check {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d9d5e7;
+  border-radius: 50%;
+  color: transparent;
+}
+
+.robot-register-role-check i {
+  font-size: 8px;
+}
+
+.robot-register-role.active .robot-register-role-check {
+  border-color: #7246ec;
+  background: #7246ec;
+  color: #ffffff;
+}
+
+.robot-register-role-status {
+  min-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 6px 0 14px;
+  color: #8c94a6;
+  font-size: 10px;
+}
+
+.robot-register-role-status i {
+  color: #7246ec;
+  font-size: 11px;
+}
+
+.robot-register-form-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.robot-register-form-group {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.robot-register-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #293149;
+  font-size: 10.5px;
+  font-weight: 800;
+}
+
+.robot-register-input {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.robot-register-input > i {
+  position: absolute;
+  left: 12px;
+  z-index: 2;
+  color: #adb2c3;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.robot-register-input input {
+  width: 100%;
+  height: 46px;
+  padding: 0 36px 0 36px;
+  border: 1px solid #e1dfeb;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #252c43;
+  font-size: 12px;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.robot-register-input input::placeholder {
+  color: #b1b5c4;
+}
+
+.robot-register-input input:focus {
+  border-color: #9d83f0;
+  box-shadow: 0 0 0 3px rgba(116, 70, 234, 0.08);
+}
+
+.robot-register-password-toggle {
+  position: absolute;
+  right: 4px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #abb0c0;
+  cursor: pointer;
+}
+
+.robot-register-password-toggle:hover {
+  color: #7246ec;
+}
+
+.robot-register-form-group small {
+  display: block;
+  min-height: 11px;
+  margin-top: 3px;
+  color: #db5b68;
+  font-size: 9px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.robot-register-terms {
+  width: 100%;
+  margin: 4px 0 14px;
+}
+
+.robot-register-terms label {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  color: #8b92a4;
+  font-size: 10px;
+  line-height: 1.45;
+  cursor: pointer;
+  user-select: none;
+}
+
+.robot-register-terms input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.robot-register-checkbox {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cbd0dc;
+  border-radius: 4px;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.robot-register-terms input:checked + .robot-register-checkbox {
+  border-color: #7246ec;
+  background: #7246ec;
+}
+
+.robot-register-terms input:checked + .robot-register-checkbox::after {
+  content: "";
+  width: 6px;
+  height: 3px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.robot-register-terms-text {
+  flex: 1;
+  word-break: break-word;
+}
+
+.robot-register-terms a {
+  color: #7246ec;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.robot-register-terms a:hover {
+  text-decoration: underline;
+}
+
+#termsError {
+  margin-left: 24px;
+}
+
+.robot-register-submit {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 16px;
+  border: 1px solid #7643ed;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #7d46ed, #6e39df);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 12px 25px rgba(113, 63, 231, 0.18);
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.robot-register-submit:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(113, 63, 231, 0.23);
+  filter: brightness(1.04);
+}
+
+.robot-register-submit i {
+  font-size: 11px;
+  transition: transform 0.25s ease;
+}
+
+.robot-register-submit:hover i {
+  transform: translateX(4px);
+}
+
+.robot-register-status {
+  min-height: 14px;
+  margin-top: 6px;
+  color: #2a9d72;
+  font-size: 9px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.robot-register-login {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 12px 0 14px;
+  color: #8d94a6;
+  font-size: 10px;
+  text-align: center;
+}
+
+.robot-register-login a {
+  color: #7246ec;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.robot-register-login a:hover {
+  text-decoration: underline;
+}
+
+.robot-register-security {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid #eceaf1;
+}
+
+.robot-register-security i {
+  flex: 0 0 16px;
+  color: #7c55ee;
+  font-size: 13px;
+}
+
+.robot-register-security p {
+  width: 100%;
+  max-width: 320px;
+  margin: 0;
+  color: #a0a6b5;
+  font-size: 9px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+========================================================= */
+
+@media (max-width: 1200px) {
+  .robot-register-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.9fr);
+    gap: 30px;
+  }
+
+  .robot-register-visual-content h1 {
+    font-size: 50px;
+  }
+
+  .robot-register-orbit {
+    width: 320px;
+  }
+
+  .robot-register-card {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .robot-register-page {
+    align-items: flex-start;
+    padding-top: 75px;
+  }
+
+  .robot-register-layout {
+    grid-template-columns: 1fr;
+    max-width: 580px;
+    gap: 28px;
+  }
+
+  .robot-register-visual {
+    min-height: auto;
+    padding: 0;
+  }
+
+  .robot-register-visual-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .robot-register-visual-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Completely remove off-screen floaters that trigger horizontal drag */
+  .robot-register-features,
+  .robot-register-orbit,
+  .robot-register-floating {
+    display: none !important;
+  }
+
+  .robot-register-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .robot-register-page {
+    padding: 68px 16px 25px;
+  }
+
+  .robot-register-back {
+    top: 16px;
+    left: 16px;
+    font-size: 13px;
+  }
+
+  .robot-register-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    gap: 20px;
+  }
+
+  .robot-register-visual {
+    margin-bottom: 10px;
+  }
+
+  .robot-register-visual-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .robot-register-visual-content > p {
+    font-size: 13px;
+    line-height: 1.55;
+    margin-bottom: 15px;
+  }
+
+  .robot-register-card {
+    padding: 26px 20px 20px;
+    border-radius: 20px;
+  }
+
+  .robot-register-heading h2 {
+    font-size: 26px;
+  }
+
+  .robot-register-role-selector {
+    gap: 8px;
+  }
+
+  .robot-register-role {
+    min-height: 60px;
+    padding: 8px;
+  }
+
+  .robot-register-form-row {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 540px) {
+  .robot-register-page {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .robot-register-glow {
+    display: none; /* Disables outer blur overlays causing mobile scroll stretch */
+  }
+
+  .robot-register-card {
+    padding: 22px 14px 18px;
+    border-radius: 16px;
+  }
+
+  .robot-register-role-selector {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .robot-register-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .robot-register-input input {
+    height: 44px;
+    padding: 0 32px 0 34px;
+    font-size: 11px;
+  }
+
+  .robot-register-input > i {
+    left: 10px;
+  }
+
+  .robot-register-password-toggle {
+    right: 2px;
+  }
+
+  #termsError {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .robot-register-page {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .robot-register-card {
+    padding: 18px 10px 14px;
+  }
+
+  .robot-register-visual-content h1 {
+    font-size: 26px;
+  }
+
+  .robot-register-heading h2 {
+    font-size: 22px;
+  }
+
+  .robot-register-role {
+    padding: 6px;
+  }
+
+  .robot-register-role-icon {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+  }
+}
+
+@media (max-height: 700px) and (min-width: 769px) {
+  .robot-register-page {
+    align-items: flex-start;
+    padding-top: 65px;
+    padding-bottom: 25px;
+  }
+
+  .robot-register-visual {
+    min-height: 480px;
+  }
+
+  .robot-register-card {
+    padding-top: 24px;
+    padding-bottom: 18px;
+  }
+}

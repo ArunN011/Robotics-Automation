@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Admin Alerts</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link
+        rel="stylesheet"
+        href="admin-alert.css"
+    >
+</head>
+
+<body>
+
+    <div class="dashboard-app">
+
+        <aside
+            class="dashboard-sidebar"
+            id="dashboardSidebar"
+        >
+
+            <div class="sidebar-logo">
+                <a href="admin-dashboard.html">
+                    <img
+                        src="Assets/blacklogo.webp"
+                        alt="Stackly"
+                    >
+                </a>
+            </div>
+
+            <div class="sidebar-user">
+
+                <div class="sidebar-avatar">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+
+                <div class="sidebar-user-text">
+
+                    <strong id="sidebarUserName">
+                        Admin
+                    </strong>
+
+                    <span id="sidebarUserRole">
+                        Administrator
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="sidebar-menu">
+
+                <span class="sidebar-heading">
+                    MAIN MENU
+                </span>
+
+                <a
+                    href="admin-dashboard.html"
+                    class="sidebar-link"
+                >
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+            </div>
+
+            <div class="sidebar-menu">
+
+                <span class="sidebar-heading">
+                    MANAGEMENT
+                </span>
+
+                <a
+                    href="admin-alert.html"
+                    class="sidebar-link active"
+                >
+                    <i class="bi bi-bell-fill"></i>
+                    <span>Alerts</span>
+                </a>
+
+            </div>
+
+            <div class="sidebar-menu">
+
+                <span class="sidebar-heading">
+                    ACCOUNT
+                </span>
+
+                <a
+                    href="admin-setting.html"
+                    class="sidebar-link"
+                >
+                    <i class="bi bi-gear-fill"></i>
+                    <span>Settings</span>
+                </a>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <a
+                    href="login.html"
+                    class="sidebar-link logout-link"
+                    id="logoutButton"
+                >
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+        <div
+            class="sidebar-overlay"
+            id="sidebarOverlay"
+        ></div>
+
+        <main class="dashboard-main">
+
+            <header class="dashboard-header">
+
+                <div class="header-left">
+
+                    <button
+                        type="button"
+                        class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        aria-label="Open navigation"
+                        aria-expanded="false"
+                    >
+                        <i class="bi bi-list"></i>
+                    </button>
+
+                    <a
+                        href="admin-dashboard.html"
+                        class="mobile-brand"
+                    >
+                        <img
+                            src="Assets/blacklogo.webp"
+                            alt="Stackly"
+                        >
+                    </a>
+
+                    <div class="desktop-page-heading">
+
+                        <span>
+                            MANAGEMENT
+                        </span>
+
+                        <h1>
+                            Alert Center
+                        </h1>
+
+                    </div>
+
+                </div>
+
+                <div class="header-right">
+
+                    <a
+                        href="error.html"
+                        class="header-icon-button"
+                        aria-label="Search"
+                    >
+                        <i class="bi bi-search"></i>
+                    </a>
+
+                    <button
+                        type="button"
+                        class="header-icon-button notification-button"
+                        id="notificationButton"
+                        aria-label="Notifications"
+                    >
+                        <i class="bi bi-bell-fill"></i>
+                        <span></span>
+                    </button>
+
+                    <a
+                        href="error.html"
+                        class="header-user"
+                    >
+
+                        <div class="header-user-avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+
+                        <div class="header-user-copy">
+
+                            <strong id="headerUserName">
+                                Admin
+                            </strong>
+
+                            <small id="headerUserRole">
+                                Administrator
+                            </small>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+            <div class="dashboard-content">
+
+                <section class="alert-welcome">
+
+                    <div class="alert-welcome-copy">
+
+                        <span class="alert-date">
+                            REAL-TIME MONITORING
+                        </span>
+
+                        <span class="alert-status">
+                            <i class="bi bi-circle-fill"></i>
+                            ALERT SYSTEM ONLINE
+                        </span>
+
+                        <h2>
+                            Monitor Every
+                            <strong>Critical Event</strong>
+                        </h2>
+
+                        <p>
+                            Track machine vision issues, system warnings,
+                            operational incidents and platform events from
+                            one centralized alert management workspace.
+                        </p>
+
+                        <div class="alert-actions">
+
+                            <a
+                                href="#activeAlerts"
+                                class="primary-action"
+                            >
+                                <i class="bi bi-shield-exclamation"></i>
+                                Review Alerts
+                            </a>
+
+                            <a
+                                href="error.html"
+                                class="secondary-action"
+                            >
+                                <i class="bi bi-file-earmark-text"></i>
+                                Alert Reports
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="alert-visual">
+
+                        <div class="alert-orbit orbit-one"></div>
+                        <div class="alert-orbit orbit-two"></div>
+                        <div class="alert-orbit orbit-three"></div>
+
+                        <div class="alert-core">
+                            <i class="bi bi-bell-fill"></i>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="alert-stat-grid">
+
+                    <div class="alert-stat-card">
+
+                        <div class="alert-stat-top">
+
+                            <span>
+                                Total Alerts
+                            </span>
+
+                            <div class="alert-stat-icon">
+                                <i class="bi bi-bell-fill"></i>
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            124
+                        </strong>
+
+                        <div class="alert-stat-bottom">
+                            <span class="positive">
+                                <i class="bi bi-arrow-up-right"></i>
+                                8.4%
+                            </span>
+
+                            <span>
+                                this month
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="alert-stat-card critical-card">
+
+                        <div class="alert-stat-top">
+
+                            <span>
+                                Critical
+                            </span>
+
+                            <div class="alert-stat-icon critical">
+                                <i class="bi bi-exclamation-octagon-fill"></i>
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            03
+                        </strong>
+
+                        <div class="alert-stat-bottom">
+                            <span class="critical-text">
+                                <i class="bi bi-arrow-up-right"></i>
+                                1 new
+                            </span>
+
+                            <span>
+                                requires action
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="alert-stat-card warning-card">
+
+                        <div class="alert-stat-top">
+
+                            <span>
+                                Warnings
+                            </span>
+
+                            <div class="alert-stat-icon warning">
+                                <i class="bi bi-exclamation-triangle-fill"></i>
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            07
+                        </strong>
+
+                        <div class="alert-stat-bottom">
+                            <span class="warning-text">
+                                <i class="bi bi-dash"></i>
+                                2 resolved
+                            </span>
+
+                            <span>
+                                under review
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="alert-stat-card">
+
+                        <div class="alert-stat-top">
+
+                            <span>
+                                Resolved
+                            </span>
+
+                            <div class="alert-stat-icon resolved">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            114
+                        </strong>
+
+                        <div class="alert-stat-bottom">
+                            <span class="positive">
+                                <i class="bi bi-arrow-up-right"></i>
+                                14.2%
+                            </span>
+
+                            <span>
+                                resolution rate
+                            </span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="alert-layout">
+
+                    <div class="dashboard-card alert-list-card" id="activeAlerts">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    ACTIVE ALERTS
+                                </span>
+
+                                <h3>
+                                    Current Incidents
+                                </h3>
+
+                            </div>
+
+                            <div class="alert-filter-actions">
+
+                                <select
+                                    id="severityFilter"
+                                    class="alert-select"
+                                >
+                                    <option value="all">
+                                        All Alerts
+                                    </option>
+
+                                    <option value="critical">
+                                        Critical
+                                    </option>
+
+                                    <option value="warning">
+                                        Warning
+                                    </option>
+
+                                    <option value="info">
+                                        Information
+                                    </option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <div class="alert-list" id="alertList">
+
+                            <div
+                                class="system-alert critical"
+                                data-severity="critical"
+                            >
+
+                                <div class="system-alert-icon">
+                                    <i class="bi bi-exclamation-octagon-fill"></i>
+                                </div>
+
+                                <div class="system-alert-content">
+
+                                    <div class="system-alert-heading">
+
+                                        <strong>
+                                            Machine Vision Camera Offline
+                                        </strong>
+
+                                        <span class="severity-badge critical-badge">
+                                            CRITICAL
+                                        </span>
+
+                                    </div>
+
+                                    <p>
+                                        CAM-18 on Production Line 03 has stopped responding.
+                                        Immediate inspection is recommended.
+                                    </p>
+
+                                    <div class="system-alert-meta">
+
+                                        <span>
+                                            <i class="bi bi-camera-fill"></i>
+                                            CAM-18
+                                        </span>
+
+                                        <span>
+                                            <i class="bi bi-geo-alt-fill"></i>
+                                            Line 03
+                                        </span>
+
+                                        <span>
+                                            <i class="bi bi-clock-fill"></i>
+                                            4 min ago
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                                <a
+                                    href="error.html"
+                                    class="resolve-button"
+                                >
+                                    Review
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="system-alert warning"
+                                data-severity="warning"
+                            >
+
+                                <div class="system-alert-icon">
+                                    <i class="bi bi-exclamation-triangle-fill"></i>
+                                </div>
+
+                                <div class="system-alert-content">
+
+                                    <div class="system-alert-heading">
+
+                                        <strong>
+                                            Vision Network Latency
+                                        </strong>
+
+                                        <span class="severity-badge warning-badge">
+                                            WARNING
+                                        </span>
+
+                                    </div>
+
+                                    <p>
+                                        Processing latency exceeded the configured threshold
+                                        on the vision network.
+                                    </p>
+
+                                    <div class="system-alert-meta">
+
+                                        <span>
+                                            <i class="bi bi-diagram-3-fill"></i>
+                                            Network
+                                        </span>
+
+                                        <span>
+                                            <i class="bi bi-speedometer2"></i>
+                                            184ms
+                                        </span>
+
+                                        <span>
+                                            <i class="bi bi-clock-fill"></i>
+                                            11 min ago
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                                <a
+                                    href="error.html"
+                                    class="resolve-button warning-resolve"
+                                >
+                                    Review
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="system-alert critical"
+                                data-severity="critical"
+                            >
+
+                                <div class="system-alert-icon">
+                                    <i class="bi bi-cpu-fill"></i>
+                                </div>
+
+                                <div class="system-alert-content">
+
+                                    <div class="system-alert-heading">
+
+                                        <strong>
+                                            AI Inference Service Delay
+                                        </strong>
+
+                                        <span class="severity-badge critical-badge">
+                                            CRITICAL
+                                        </span>
+
+                                    </div>
+
+                                    <p>
+                                        AI inference response time is above the operational
+                                        threshold for Line Vision 02.
+                                    </p>
+
+                                    <div class="system-alert-meta">
+
+                                        <span>
+                                            <i class="bi bi-cpu-fill"></i>
+                                            AI Engine
+                                        </span>
+
+                                        <span>
+                                            <i class="bi bi-activity"></i>
+                                            248ms
+                                        </span>
+
+                                        <span>
+                                            <i class="bi bi-clock-fill"></i>
+                                            18 min ago
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                                <a
+                                    href="error.html"
+                                    class="resolve-button"
+                                >
+                                    Review
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="system-alert warning"
+                                data-severity="warning"
+                            >
+
+                                <div class="system-alert-icon">
+                                    <i class="bi bi-hdd-network-fill"></i>
+                                </div>
+
+                                <div class="system-alert-content">
+
+                                    <div class="system-alert-heading">
+
+                                        <strong>
+                                            Storage Capacity Warning
+                                        </strong>
+
+                                        <span class="severity-badge warning-badge">
+                                            WARNING
+                                        </span>
+
+                                    </div>
+
+                                    <p>
+                                        Vision data storage has reached 82% capacity
+                                        and requires scheduled maintenance.
+                                    </p>
+
+                                    <div class="system-alert-meta">
+
+                                        <span>
+                                            <i class="bi bi-database-fill"></i>
+                                            Storage
+                                        </span>
+
+                                        <span>
+                                            <i class="bi bi-pie-chart-fill"></i>
+                                            82%
+                                        </span>
+
+                                        <span>
+                                            <i class="bi bi-clock-fill"></i>
+                                            31 min ago
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                                <a
+                                    href="error.html"
+                                    class="resolve-button warning-resolve"
+                                >
+                                    Review
+                                </a>
+
+                            </div>
+
+                            <div
+                                class="system-alert info"
+                                data-severity="info"
+                            >
+
+                                <div class="system-alert-icon">
+                                    <i class="bi bi-info-circle-fill"></i>
+                                </div>
+
+                                <div class="system-alert-content">
+
+                                    <div class="system-alert-heading">
+
+                                        <strong>
+                                            Vision Model Update Available
+                                        </strong>
+
+                                        <span class="severity-badge info-badge">
+                                            INFO
+                                        </span>
+
+                                    </div>
+
+                                    <p>
+                                        Machine Vision AI model version 4.8 is available
+                                        for deployment.
+                                    </p>
+
+                                    <div class="system-alert-meta">
+
+                                        <span>
+                                            <i class="bi bi-box-seam-fill"></i>
+                                            Model 4.8
+                                        </span>
+
+                                        <span>
+                                            <i class="bi bi-download"></i>
+                                            Update
+                                        </span>
+
+                                        <span>
+                                            <i class="bi bi-clock-fill"></i>
+                                            48 min ago
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                                <a
+                                    href="error.html"
+                                    class="resolve-button info-resolve"
+                                >
+                                    Review
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <div
+                            class="no-alerts"
+                            id="noAlerts"
+                        >
+                            <i class="bi bi-check2-circle"></i>
+                            <strong>
+                                No alerts found
+                            </strong>
+                            <span>
+                                There are no alerts matching your selected filter.
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-card alert-summary-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    ALERT OVERVIEW
+                                </span>
+
+                                <h3>
+                                    Severity Summary
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                        <div class="severity-summary">
+
+                            <div class="severity-summary-row">
+
+                                <div class="severity-summary-label">
+                                    <i class="bi bi-circle-fill critical-dot"></i>
+                                    <span>
+                                        Critical
+                                    </span>
+                                </div>
+
+                                <strong>
+                                    03
+                                </strong>
+
+                            </div>
+
+                            <div class="severity-bar">
+                                <span
+                                    class="critical-fill"
+                                    style="width: 28%;"
+                                ></span>
+                            </div>
+
+                            <div class="severity-summary-row">
+
+                                <div class="severity-summary-label">
+                                    <i class="bi bi-circle-fill warning-dot"></i>
+                                    <span>
+                                        Warning
+                                    </span>
+                                </div>
+
+                                <strong>
+                                    07
+                                </strong>
+
+                            </div>
+
+                            <div class="severity-bar">
+                                <span
+                                    class="warning-fill"
+                                    style="width: 48%;"
+                                ></span>
+                            </div>
+
+                            <div class="severity-summary-row">
+
+                                <div class="severity-summary-label">
+                                    <i class="bi bi-circle-fill info-dot"></i>
+                                    <span>
+                                        Information
+                                    </span>
+                                </div>
+
+                                <strong>
+                                    14
+                                </strong>
+
+                            </div>
+
+                            <div class="severity-bar">
+                                <span
+                                    class="info-fill"
+                                    style="width: 72%;"
+                                ></span>
+                            </div>
+
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="alert-resolution">
+
+                            <div class="resolution-icon">
+                                <i class="bi bi-check2-circle"></i>
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    92%
+                                </strong>
+
+                                <span>
+                                    alerts resolved within target time
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <a
+                            href="error.html"
+                            class="summary-link"
+                        >
+                            View Alert History
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </section>
+
+                <section class="alert-chart-grid">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    ALERT ANALYTICS
+                                </span>
+
+                                <h3>
+                                    Alert Activity
+                                </h3>
+
+                            </div>
+
+                            <select
+                                id="alertChartPeriod"
+                                class="alert-select"
+                            >
+                                <option>
+                                    Last 7 Days
+                                </option>
+
+                                <option>
+                                    Last 30 Days
+                                </option>
+
+                                <option>
+                                    Last 90 Days
+                                </option>
+                            </select>
+
+                        </div>
+
+                        <div class="chart-wrapper">
+                            <canvas id="alertActivityChart"></canvas>
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-card response-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    RESPONSE PERFORMANCE
+                                </span>
+
+                                <h3>
+                                    Resolution Status
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                        <div class="response-ring">
+
+                            <div class="response-ring-inner">
+
+                                <strong>
+                                    92%
+                                </strong>
+
+                                <span>
+                                    RESOLVED
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="response-stats">
+
+                            <div>
+                                <span>
+                                    Resolved
+                                </span>
+
+                                <strong>
+                                    114
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>
+                                    Pending
+                                </span>
+
+                                <strong>
+                                    10
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="dashboard-card alert-history-card">
+
+                    <div class="card-heading">
+
+                        <div>
+
+                            <span>
+                                ALERT HISTORY
+                            </span>
+
+                            <h3>
+                                Recent Resolved Events
+                            </h3>
+
+                        </div>
+
+                        <a
+                            href="error.html"
+                            class="card-link"
+                        >
+                            Full history
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="history-list">
+
+                        <div class="history-item">
+
+                            <div class="history-icon success">
+                                <i class="bi bi-check-lg"></i>
+                            </div>
+
+                            <div class="history-copy">
+
+                                <strong>
+                                    Camera connection restored
+                                </strong>
+
+                                <span>
+                                    CAM-21 · Assembly Line 05
+                                </span>
+
+                            </div>
+
+                            <div class="history-time">
+                                18 min
+                            </div>
+
+                            <span class="resolved-label">
+                                Resolved
+                            </span>
+
+                        </div>
+
+                        <div class="history-item">
+
+                            <div class="history-icon success">
+                                <i class="bi bi-check-lg"></i>
+                            </div>
+
+                            <div class="history-copy">
+
+                                <strong>
+                                    Image processing latency reduced
+                                </strong>
+
+                                <span>
+                                    Vision Network · Line 02
+                                </span>
+
+                            </div>
+
+                            <div class="history-time">
+                                42 min
+                            </div>
+
+                            <span class="resolved-label">
+                                Resolved
+                            </span>
+
+                        </div>
+
+                        <div class="history-item">
+
+                            <div class="history-icon success">
+                                <i class="bi bi-check-lg"></i>
+                            </div>
+
+                            <div class="history-copy">
+
+                                <strong>
+                                    Storage warning cleared
+                                </strong>
+
+                                <span>
+                                    Vision Data · Primary cluster
+                                </span>
+
+                            </div>
+
+                            <div class="history-time">
+                                1 hr
+                            </div>
+
+                            <span class="resolved-label">
+                                Resolved
+                            </span>
+
+                        </div>
+
+                        <div class="history-item">
+
+                            <div class="history-icon success">
+                                <i class="bi bi-check-lg"></i>
+                            </div>
+
+                            <div class="history-copy">
+
+                                <strong>
+                                    AI service recovered
+                                </strong>
+
+                                <span>
+                                    AI Engine · Production Line 04
+                                </span>
+
+                            </div>
+
+                            <div class="history-time">
+                                2 hr
+                            </div>
+
+                            <span class="resolved-label">
+                                Resolved
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="alert-insight">
+
+                    <div class="insight-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <div class="insight-copy">
+
+                        <span>
+                            ADMIN ALERT INSIGHT
+                        </span>
+
+                        <strong>
+                            Alert response performance is within the configured
+                            operational target.
+                        </strong>
+
+                        <p>
+                            Critical incidents should remain under continuous review
+                            until the associated systems return to normal operation.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="error.html"
+                        class="insight-link"
+                    >
+                        View monitoring
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </section>
+
+                <footer class="dashboard-footer">
+
+                    <span>
+                        © 2026 Stackly. All rights reserved.
+                    </span>
+
+                    <div>
+
+                        <a href="error.html">
+                            Privacy
+                        </a>
+
+                        <a href="error.html">
+                            Terms
+                        </a>
+
+                        <a href="error.html">
+                            Support
+                        </a>
+
+                    </div>
+
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="admin-alert.js"></script>
+
+</body>
+</html>

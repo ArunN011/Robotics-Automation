@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stackly | Admin Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    >
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link
+        rel="stylesheet"
+        href="admin-dashboard.css"
+    >
+</head>
+
+<body>
+
+    <div class="dashboard-app">
+
+        <aside
+            class="dashboard-sidebar"
+            id="dashboardSidebar"
+        >
+
+            <div class="sidebar-logo">
+                <a href="admin-dashboard.html">
+                    <img
+                        src="Assets/blacklogo.webp"
+                        alt="Stackly"
+                    >
+                </a>
+            </div>
+
+            <div class="sidebar-user">
+
+                <div class="sidebar-avatar">
+                    <i class="bi bi-person-fill"></i>
+                </div>
+
+                <div class="sidebar-user-text">
+
+                    <strong id="sidebarUserName">
+                        Admin
+                    </strong>
+
+                    <span id="sidebarUserRole">
+                        Administrator
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="sidebar-menu">
+
+                <span class="sidebar-heading">
+                    MAIN MENU
+                </span>
+
+                <a
+                    href="admin-dashboard.html"
+                    class="sidebar-link active"
+                >
+                    <i class="bi bi-grid-1x2-fill"></i>
+                    <span>Dashboard</span>
+                </a>
+
+            </div>
+
+
+            <div class="sidebar-menu">
+
+                <span class="sidebar-heading">
+                    MANAGEMENT
+                </span>
+
+                <a
+                    href="admin-alert.html"
+                    class="sidebar-link"
+                >
+                    <i class="bi bi-bell-fill"></i>
+                    <span>Alerts</span>
+                </a>
+
+            </div>
+
+            <div class="sidebar-menu">
+
+                <span class="sidebar-heading">
+                    ACCOUNT
+                </span>
+
+                <a
+                    href="admin-setting.html"
+                    class="sidebar-link"
+                >
+                    <i class="bi bi-gear-fill"></i>
+                    <span>Settings</span>
+                </a>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <a
+                    href="login.html"
+                    class="sidebar-link logout-link"
+                    id="logoutButton"
+                >
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+        <div
+            class="sidebar-overlay"
+            id="sidebarOverlay"
+        ></div>
+
+        <main class="dashboard-main">
+
+            <header class="dashboard-header">
+
+                <div class="header-left">
+
+                    <button
+                        type="button"
+                        class="mobile-menu-button"
+                        id="mobileMenuButton"
+                        aria-label="Open navigation"
+                        aria-expanded="false"
+                    >
+                        <i class="bi bi-list"></i>
+                    </button>
+
+                    <a
+                        href="admin-dashboard.html"
+                        class="mobile-brand"
+                    >
+                        <img
+                            src="Assets/blacklogo.webp"
+                            alt="Stackly"
+                        >
+                    </a>
+
+                    <div class="desktop-page-heading">
+
+                        <span>
+                            ADMIN PANEL
+                        </span>
+
+                        <h1>
+                            Command Center
+                        </h1>
+
+                    </div>
+
+                </div>
+
+                <div class="header-right">
+
+                    <a
+                        href="error.html"
+                        class="header-icon-button"
+                        aria-label="Search"
+                    >
+                        <i class="bi bi-search"></i>
+                    </a>
+
+                    <a
+                        href="error.html"
+                        class="header-icon-button notification-button"
+                        aria-label="Notifications"
+                    >
+                        <i class="bi bi-bell"></i>
+                        <span></span>
+                    </a>
+
+                    <a
+                        href="error.html"
+                        class="header-user"
+                    >
+
+                        <div class="header-user-avatar">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+
+                        <div class="header-user-copy">
+
+                            <strong id="headerUserName">
+                                Admin
+                            </strong>
+
+                            <small id="headerUserRole">
+                                Administrator
+                            </small>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+            <div class="dashboard-content">
+
+                <section class="dashboard-welcome">
+
+                    <div class="welcome-copy">
+
+                        <span class="welcome-date">
+                            ADMINISTRATOR WORKSPACE
+                        </span>
+
+                        <span class="welcome-status">
+                            <span></span>
+                            ALL SYSTEMS OPERATIONAL
+                        </span>
+
+                        <h2>
+                            Control Your
+                            <strong>Automation Network</strong>
+                        </h2>
+
+                        <p>
+                            Manage users, machine vision systems, active projects,
+                            system health, analytics and operational alerts from
+                            one centralized administration workspace.
+                        </p>
+
+                        <div class="welcome-actions">
+
+                            <a
+                                href="error.html"
+                                class="primary-action"
+                            >
+                                <i class="bi bi-speedometer2"></i>
+                                Open Analytics
+                            </a>
+
+                            <a
+                                href="error.html"
+                                class="secondary-action"
+                            >
+                                <i class="bi bi-file-earmark-text"></i>
+                                Generate Report
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="welcome-visual">
+
+                        <div class="orbit orbit-c"></div>
+                        <div class="orbit orbit-b"></div>
+                        <div class="orbit orbit-a"></div>
+
+                        <div class="visual-core">
+                            <i class="bi bi-cpu-fill"></i>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="metric-grid">
+
+                    <div class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span>
+                                Total Users
+                            </span>
+
+                            <div class="metric-icon">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            1,284
+                        </strong>
+
+                        <div class="metric-bottom">
+                            <span class="positive">
+                                <i class="bi bi-arrow-up-right"></i>
+                                12.6%
+                            </span>
+
+                            <span>
+                                this month
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span>
+                                Active Projects
+                            </span>
+
+                            <div class="metric-icon">
+                                <i class="bi bi-kanban-fill"></i>
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            86
+                        </strong>
+
+                        <div class="metric-bottom">
+                            <span class="positive">
+                                <i class="bi bi-arrow-up-right"></i>
+                                8.4%
+                            </span>
+
+                            <span>
+                                this quarter
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span>
+                                Vision Systems
+                            </span>
+
+                            <div class="metric-icon">
+                                <i class="bi bi-eye-fill"></i>
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            42
+                        </strong>
+
+                        <div class="metric-bottom">
+                            <span class="positive">
+                                <i class="bi bi-arrow-up-right"></i>
+                                5 active
+                            </span>
+
+                            <span>
+                                deployments
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span>
+                                Open Alerts
+                            </span>
+
+                            <div class="metric-icon alert-icon">
+                                <i class="bi bi-exclamation-triangle-fill"></i>
+                            </div>
+
+                        </div>
+
+                        <strong>
+                            07
+                        </strong>
+
+                        <div class="metric-bottom">
+                            <span class="warning">
+                                <i class="bi bi-arrow-right"></i>
+                                3 critical
+                            </span>
+
+                            <span>
+                                require review
+                            </span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="primary-grid">
+
+                    <div class="dashboard-card performance-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    SYSTEM PERFORMANCE
+                                </span>
+
+                                <h3>
+                                    Automation Activity
+                                </h3>
+
+                            </div>
+
+                            <select
+                                id="chartPeriod"
+                                class="chart-select"
+                            >
+                                <option>
+                                    Last 7 Days
+                                </option>
+
+                                <option>
+                                    Last 30 Days
+                                </option>
+
+                                <option>
+                                    Last 90 Days
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="chart-wrapper">
+                            <canvas id="activityChart"></canvas>
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-card system-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    SYSTEM HEALTH
+                                </span>
+
+                                <h3>
+                                    Infrastructure
+                                </h3>
+
+                            </div>
+
+                            <span class="health-badge">
+                                <i class="bi bi-circle-fill"></i>
+                                Healthy
+                            </span>
+
+                        </div>
+
+                        <div class="health-main">
+
+                            <div class="health-ring">
+
+                                <div class="health-ring-value">
+                                    <strong>
+                                        98
+                                    </strong>
+
+                                    <span>
+                                        HEALTH
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <div class="health-list">
+
+                                <div class="health-row">
+
+                                    <div>
+                                        <span>
+                                            AI Engine
+                                        </span>
+
+                                        <small>
+                                            Processing service
+                                        </small>
+                                    </div>
+
+                                    <strong>
+                                        99.9%
+                                    </strong>
+
+                                </div>
+
+                                <div class="health-row">
+
+                                    <div>
+                                        <span>
+                                            Vision Network
+                                        </span>
+
+                                        <small>
+                                            Device availability
+                                        </small>
+                                    </div>
+
+                                    <strong>
+                                        98.4%
+                                    </strong>
+
+                                </div>
+
+                                <div class="health-row">
+
+                                    <div>
+                                        <span>
+                                            Data Pipeline
+                                        </span>
+
+                                        <small>
+                                            Stream uptime
+                                        </small>
+                                    </div>
+
+                                    <strong>
+                                        99.8%
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="secondary-grid">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    MACHINE VISION
+                                </span>
+
+                                <h3>
+                                    Vision Systems
+                                </h3>
+
+                            </div>
+
+                            <a
+                                href="machine-vision.html"
+                                class="card-link"
+                            >
+                                View dashboard
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="fleet-grid">
+
+                            <div class="fleet-card">
+
+                                <div class="fleet-card-top">
+
+                                    <div class="fleet-icon">
+                                        <i class="bi bi-camera-fill"></i>
+                                    </div>
+
+                                    <span class="online-badge">
+                                        ONLINE
+                                    </span>
+
+                                </div>
+
+                                <strong>
+                                    Line Vision 01
+                                </strong>
+
+                                <span>
+                                    12 cameras
+                                </span>
+
+                                <div class="fleet-progress">
+                                    <span style="width: 96%;"></span>
+                                </div>
+
+                                <small>
+                                    96% utilization
+                                </small>
+
+                            </div>
+
+                            <div class="fleet-card">
+
+                                <div class="fleet-card-top">
+
+                                    <div class="fleet-icon">
+                                        <i class="bi bi-camera-fill"></i>
+                                    </div>
+
+                                    <span class="online-badge">
+                                        ONLINE
+                                    </span>
+
+                                </div>
+
+                                <strong>
+                                    Line Vision 02
+                                </strong>
+
+                                <span>
+                                    8 cameras
+                                </span>
+
+                                <div class="fleet-progress">
+                                    <span style="width: 91%;"></span>
+                                </div>
+
+                                <small>
+                                    91% utilization
+                                </small>
+
+                            </div>
+
+                            <div class="fleet-card">
+
+                                <div class="fleet-card-top">
+
+                                    <div class="fleet-icon">
+                                        <i class="bi bi-camera-fill"></i>
+                                    </div>
+
+                                    <span class="warning-badge">
+                                        WARNING
+                                    </span>
+
+                                </div>
+
+                                <strong>
+                                    Line Vision 03
+                                </strong>
+
+                                <span>
+                                    6 cameras
+                                </span>
+
+                                <div class="fleet-progress">
+                                    <span style="width: 72%;"></span>
+                                </div>
+
+                                <small>
+                                    2 cameras offline
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-card activity-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    RECENT ACTIVITY
+                                </span>
+
+                                <h3>
+                                    Admin Events
+                                </h3>
+
+                            </div>
+
+                            <a
+                                href="error.html"
+                                class="card-link"
+                            >
+                                View all
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="timeline-list">
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-icon success">
+                                    <i class="bi bi-person-plus-fill"></i>
+                                </div>
+
+                                <div class="timeline-copy">
+
+                                    <strong>
+                                        New user registered
+                                    </strong>
+
+                                    <span>
+                                        New workspace account created
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    8 min
+                                </small>
+
+                            </div>
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-icon vision">
+                                    <i class="bi bi-eye-fill"></i>
+                                </div>
+
+                                <div class="timeline-copy">
+
+                                    <strong>
+                                        Vision system updated
+                                    </strong>
+
+                                    <span>
+                                        Machine Vision Line 02 configuration changed
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    21 min
+                                </small>
+
+                            </div>
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-icon warning">
+                                    <i class="bi bi-exclamation-triangle-fill"></i>
+                                </div>
+
+                                <div class="timeline-copy">
+
+                                    <strong>
+                                        Camera warning detected
+                                    </strong>
+
+                                    <span>
+                                        CAM-18 requires maintenance
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    36 min
+                                </small>
+
+                            </div>
+
+                            <div class="timeline-item">
+
+                                <div class="timeline-icon report">
+                                    <i class="bi bi-file-earmark-bar-graph-fill"></i>
+                                </div>
+
+                                <div class="timeline-copy">
+
+                                    <strong>
+                                        Monthly report generated
+                                    </strong>
+
+                                    <span>
+                                        Operations report is ready
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    1 hr
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="lower-grid">
+
+                    <div class="dashboard-card users-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    USER MANAGEMENT
+                                </span>
+
+                                <h3>
+                                    Recent Users
+                                </h3>
+
+                            </div>
+
+                            <a
+                                href="error.html"
+                                class="card-link"
+                            >
+                                Manage users
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="user-table">
+
+                            <div class="table-head">
+                                <span>
+                                    USER
+                                </span>
+
+                                <span>
+                                    ROLE
+                                </span>
+
+                                <span>
+                                    STATUS
+                                </span>
+
+                                <span>
+                                    ACCESS
+                                </span>
+                            </div>
+
+                            <div class="table-row">
+
+                                <div class="user-cell">
+
+                                    <div class="table-avatar">
+                                        <i class="bi bi-person-fill"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            Mohankl2003
+                                        </strong>
+
+                                        <small>
+                                            user01@example.com
+                                        </small>
+                                    </div>
+
+                                </div>
+
+                                <span>
+                                    Client
+                                </span>
+
+                                <span class="table-status active">
+                                    Active
+                                </span>
+
+                                <a
+                                    href="error.html"
+                                    class="table-action"
+                                >
+                                    View
+                                </a>
+
+                            </div>
+
+                            <div class="table-row">
+
+                                <div class="user-cell">
+
+                                    <div class="table-avatar">
+                                        <i class="bi bi-person-fill"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            Vision Admin
+                                        </strong>
+
+                                        <small>
+                                            admin01@example.com
+                                        </small>
+                                    </div>
+
+                                </div>
+
+                                <span>
+                                    Admin
+                                </span>
+
+                                <span class="table-status active">
+                                    Active
+                                </span>
+
+                                <a
+                                    href="error.html"
+                                    class="table-action"
+                                >
+                                    View
+                                </a>
+
+                            </div>
+
+                            <div class="table-row">
+
+                                <div class="user-cell">
+
+                                    <div class="table-avatar">
+                                        <i class="bi bi-person-fill"></i>
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            System Operator
+                                        </strong>
+
+                                        <small>
+                                            operator@example.com
+                                        </small>
+                                    </div>
+
+                                </div>
+
+                                <span>
+                                    Operator
+                                </span>
+
+                                <span class="table-status pending">
+                                    Pending
+                                </span>
+
+                                <a
+                                    href="error.html"
+                                    class="table-action"
+                                >
+                                    Review
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="dashboard-card alerts-card">
+
+                        <div class="card-heading">
+
+                            <div>
+
+                                <span>
+                                    ALERT CENTER
+                                </span>
+
+                                <h3>
+                                    Priority Alerts
+                                </h3>
+
+                            </div>
+
+                            <a
+                                href="error.html"
+                                class="card-link"
+                            >
+                                View all
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="alert-list">
+
+                            <div class="alert-item critical">
+
+                                <div class="alert-icon">
+                                    <i class="bi bi-exclamation-triangle-fill"></i>
+                                </div>
+
+                                <div class="alert-copy">
+
+                                    <strong>
+                                        Camera Offline
+                                    </strong>
+
+                                    <span>
+                                        CAM-18 on Production Line 03
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Critical
+                                </small>
+
+                            </div>
+
+                            <div class="alert-item warning">
+
+                                <div class="alert-icon">
+                                    <i class="bi bi-wifi"></i>
+                                </div>
+
+                                <div class="alert-copy">
+
+                                    <strong>
+                                        Network Latency
+                                    </strong>
+
+                                    <span>
+                                        Vision network above threshold
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Warning
+                                </small>
+
+                            </div>
+
+                            <div class="alert-item info">
+
+                                <div class="alert-icon">
+                                    <i class="bi bi-info-circle-fill"></i>
+                                </div>
+
+                                <div class="alert-copy">
+
+                                    <strong>
+                                        Model Update
+                                    </strong>
+
+                                    <span>
+                                        AI model version 4.8 is available
+                                    </span>
+
+                                </div>
+
+                                <small>
+                                    Info
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <section class="quick-actions-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <span>
+                                QUICK ACCESS
+                            </span>
+
+                            <h3>
+                                Administration Tools
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <div class="quick-actions-grid">
+
+                        <a
+                            href="error.html"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+
+                            <strong>
+                                User Management
+                            </strong>
+
+                            <span>
+                                Manage workspace accounts
+                            </span>
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                        <a
+                            href="error.html"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                <i class="bi bi-bar-chart-fill"></i>
+                            </div>
+
+                            <strong>
+                                Analytics
+                            </strong>
+
+                            <span>
+                                Review system performance
+                            </span>
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                        <a
+                            href="error.html"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                <i class="bi bi-file-earmark-bar-graph-fill"></i>
+                            </div>
+
+                            <strong>
+                                Reports
+                            </strong>
+
+                            <span>
+                                Generate operational reports
+                            </span>
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                        <a
+                            href="error.html"
+                            class="quick-action"
+                        >
+
+                            <div class="quick-action-icon">
+                                <i class="bi bi-gear-fill"></i>
+                            </div>
+
+                            <strong>
+                                Settings
+                            </strong>
+
+                            <span>
+                                Configure platform settings
+                            </span>
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+                <section class="dashboard-insight">
+
+                    <div class="insight-icon">
+                        <i class="bi bi-lightbulb-fill"></i>
+                    </div>
+
+                    <div class="insight-copy">
+
+                        <span>
+                            ADMIN INSIGHT
+                        </span>
+
+                        <strong>
+                            System utilization is currently stable,
+                            with machine vision services maintaining high availability.
+                        </strong>
+
+                    </div>
+
+                    <a
+                        href="error.html"
+                        class="insight-link"
+                    >
+                        View detailed analysis
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </section>
+
+                <footer class="dashboard-footer">
+
+                    <span>
+                        © 2026 Stackly. All rights reserved.
+                    </span>
+
+                    <div>
+
+                        <a href="error.html">
+                            Privacy
+                        </a>
+
+                        <a href="error.html">
+                            Terms
+                        </a>
+
+                        <a href="error.html">
+                            Support
+                        </a>
+
+                    </div>
+
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="admin-dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Robotics & Automation | Register</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+  <main class="robot-register-page">
+
+    <div class="robot-register-grid"></div>
+
+    <div class="robot-register-glow robot-register-glow-one"></div>
+    <div class="robot-register-glow robot-register-glow-two"></div>
+
+    <a href="index.html" class="robot-register-back">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Back To Home</span>
+    </a>
+
+    <div class="robot-register-floating register-float-one">
+      <i class="fa-solid fa-microchip"></i>
+    </div>
+
+    <div class="robot-register-floating register-float-two">
+      <i class="fa-solid fa-gears"></i>
+    </div>
+
+    <div class="robot-register-floating register-float-three">
+      <i class="fa-solid fa-robot"></i>
+    </div>
+
+    <div class="robot-register-layout">
+
+      <section class="robot-register-visual">
+
+        <div class="robot-register-visual-content">
+
+          <span class="robot-register-visual-label">
+            <i class="fa-solid fa-user-plus"></i>
+            ROBOTICS &amp; AUTOMATION
+          </span>
+
+          <h1>
+            Create Your
+            <strong>Smart Workspace</strong>
+            Today
+          </h1>
+
+          <p>
+            Create your account to explore robotics, artificial intelligence,
+            automation insights, and intelligent technology solutions.
+          </p>
+
+          <div class="robot-register-features">
+
+            <div class="robot-register-feature">
+              <div class="robot-register-feature-icon">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+
+              <div>
+                <h3>Artificial Intelligence</h3>
+                <span>Explore intelligent technology solutions</span>
+              </div>
+            </div>
+
+            <div class="robot-register-feature">
+              <div class="robot-register-feature-icon">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+
+              <div>
+                <h3>Robotics &amp; Automation</h3>
+                <span>Discover connected automation systems</span>
+              </div>
+            </div>
+
+            <div class="robot-register-feature">
+              <div class="robot-register-feature-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+
+              <div>
+                <h3>Smart Insights</h3>
+                <span>Explore data-driven business insights</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="robot-register-orbit">
+
+          <div class="register-orbit register-orbit-large"></div>
+          <div class="register-orbit register-orbit-medium"></div>
+          <div class="register-orbit register-orbit-small"></div>
+
+          <div class="robot-register-core">
+            <div class="robot-register-core-inner">
+              <i class="fa-solid fa-user-plus"></i>
+            </div>
+          </div>
+
+          <div class="robot-register-node register-node-one">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+
+          <div class="robot-register-node register-node-two">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+
+          <div class="robot-register-node register-node-three">
+            <i class="fa-solid fa-gears"></i>
+          </div>
+
+          <div class="robot-register-node register-node-four">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="robot-register-card-wrap">
+
+        <div class="robot-register-card">
+
+          <div class="robot-register-brand">
+            <a href="index.html">
+              <img src="Assets/blacklogo.webp" alt="Stackly">
+            </a>
+          </div>
+
+          <div class="robot-register-heading">
+
+            <span>SMART TECHNOLOGY PORTAL</span>
+
+            <h2>Create Account</h2>
+
+            <p>
+              Register for access to your robotics and automation workspace.
+            </p>
+
+          </div>
+
+          <form id="robotRegisterForm" novalidate>
+
+            <div class="robot-register-role-heading">
+              <label>Choose Account Type</label>
+            </div>
+
+            <div class="robot-register-role-selector">
+
+              <button
+                type="button"
+                class="robot-register-role active"
+                data-role="client"
+              >
+                <span class="robot-register-role-icon">
+                  <i class="fa-solid fa-user"></i>
+                </span>
+
+                <span class="robot-register-role-content">
+                  <strong>Client</strong>
+                  <small>
+                    Access services and automation solutions
+                  </small>
+                </span>
+
+                <span class="robot-register-role-check">
+                  <i class="fa-solid fa-check"></i>
+                </span>
+              </button>
+
+              <button
+                type="button"
+                class="robot-register-role"
+                data-role="admin"
+              >
+                <span class="robot-register-role-icon">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </span>
+
+                <span class="robot-register-role-content">
+                  <strong>Admin</strong>
+                  <small>
+                    Manage platform and automation operations
+                  </small>
+                </span>
+
+                <span class="robot-register-role-check">
+                  <i class="fa-solid fa-check"></i>
+                </span>
+              </button>
+
+            </div>
+
+            <input
+              type="hidden"
+              id="registerRole"
+              value="client"
+            >
+
+            <div
+              class="robot-register-role-status"
+              id="registerRoleStatus"
+            >
+              <i class="fa-solid fa-circle-info"></i>
+              Client account selected
+            </div>
+
+            <div class="robot-register-form-row">
+
+              <div class="robot-register-form-group">
+
+                <label for="registerFirstName">
+                  First Name
+                </label>
+
+                <div class="robot-register-input">
+
+                  <i class="fa-regular fa-user"></i>
+
+                  <input
+                    type="text"
+                    id="registerFirstName"
+                    placeholder="Enter first name"
+                    autocomplete="given-name"
+                  >
+
+                </div>
+
+                <small id="firstNameError"></small>
+
+              </div>
+
+              <div class="robot-register-form-group">
+
+                <label for="registerLastName">
+                  Last Name
+                </label>
+
+                <div class="robot-register-input">
+
+                  <i class="fa-regular fa-user"></i>
+
+                  <input
+                    type="text"
+                    id="registerLastName"
+                    placeholder="Enter last name"
+                    autocomplete="family-name"
+                  >
+
+                </div>
+
+                <small id="lastNameError"></small>
+
+              </div>
+
+            </div>
+
+            <div class="robot-register-form-group">
+
+              <label for="registerEmail">
+                Email Address
+              </label>
+
+              <div class="robot-register-input">
+
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                  type="email"
+                  id="registerEmail"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                >
+
+              </div>
+
+              <small id="registerEmailError"></small>
+
+            </div>
+
+            <div class="robot-register-form-group">
+
+              <label for="registerPhone">
+                Phone Number
+              </label>
+
+              <div class="robot-register-input">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <input
+                  type="tel"
+                  id="registerPhone"
+                  placeholder="Enter your phone number"
+                  autocomplete="tel"
+                >
+
+              </div>
+
+              <small id="registerPhoneError"></small>
+
+            </div>
+
+            <div class="robot-register-form-row">
+
+              <div class="robot-register-form-group">
+
+                <label for="registerPassword">
+                  Password
+                </label>
+
+                <div class="robot-register-input">
+
+                  <i class="fa-solid fa-lock"></i>
+
+                  <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="Create password"
+                    autocomplete="new-password"
+                  >
+
+                  <button
+                    type="button"
+                    class="robot-register-password-toggle"
+                    id="registerPasswordToggle"
+                    aria-label="Show password"
+                  >
+                    <i class="fa-regular fa-eye"></i>
+                  </button>
+
+                </div>
+
+                <small id="registerPasswordError"></small>
+
+              </div>
+
+              <div class="robot-register-form-group">
+
+                <label for="registerConfirmPassword">
+                  Confirm Password
+                </label>
+
+                <div class="robot-register-input">
+
+                  <i class="fa-solid fa-lock"></i>
+
+                  <input
+                    type="password"
+                    id="registerConfirmPassword"
+                    placeholder="Confirm password"
+                    autocomplete="new-password"
+                  >
+
+                  <button
+                    type="button"
+                    class="robot-register-password-toggle"
+                    id="registerConfirmPasswordToggle"
+                    aria-label="Show password"
+                  >
+                    <i class="fa-regular fa-eye"></i>
+                  </button>
+
+                </div>
+
+                <small id="registerConfirmPasswordError"></small>
+
+              </div>
+
+            </div>
+
+            <div class="robot-register-terms">
+
+              <label>
+
+                <input
+                  type="checkbox"
+                  id="registerTerms"
+                >
+
+                <span class="robot-register-checkbox"></span>
+
+                <span class="robot-register-terms-text">
+                  I agree to the
+                  <a href="error.html">Terms &amp; Conditions</a>
+                  and
+                  <a href="error.html">Privacy Policy</a>
+                </span>
+
+              </label>
+
+              <small id="termsError"></small>
+
+            </div>
+
+            <a
+              href="login.html"
+              class="robot-register-submit"
+              id="registerCreateAccount"
+            >
+              <span>Create Account</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <div
+              class="robot-register-status"
+              id="robotRegisterStatus"
+            ></div>
+
+            <div class="robot-register-login">
+
+              <span>Already have an account?</span>
+
+              <a href="login.html">
+                Sign In
+              </a>
+
+            </div>
+
+            <div class="robot-register-security">
+
+              <i class="fa-solid fa-shield-halved"></i>
+
+              <p>
+                Your registration experience is designed for a secure,
+                simple, and user-friendly automation workspace.
+              </p>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <script src="register.js"></script>
+
+</body>
+</html>

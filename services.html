@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="service.css">
+<body>
+    
+
+
+
+
+
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+
+        <a href="index.html" class="navbar-brand brand-logo">
+            <img src="Assets/blacklogo.webp" alt="Robotics Automation Logo">
+        </a>
+
+        <div class="desktop-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link ">About</a>
+            <a href="services.html" class="nav-link active">Services</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="desktop-actions">
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="register.html" class="register-btn">Register</a>
+        </div>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+            <i class="bi bi-list"></i>
+        </button>
+
+    </div>
+</nav>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<aside class="mobile-sidebar" id="mobileSidebar">
+
+    <div class="sidebar-top">
+        <a href="index.html" class="brand-logo">
+            <img src="Assets/blacklogo.webp" alt="Robotics Automation Logo">
+        </a>
+
+        <button class="close-btn" id="closeBtn" aria-label="Close menu">
+            <i class="bi bi-x-lg"></i>
+        </button>
+    </div>
+
+    <div class="mobile-menu">
+
+        <a href="index.html" class="mobile-link ">
+            <i class="bi bi-house"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="about.html" class="mobile-link">
+            <i class="bi bi-info-circle"></i>
+            <span>About</span>
+        </a>
+
+        <a href="services.html" class="mobile-link active">
+            <i class="bi bi-cpu"></i>
+            <span>Services</span>
+        </a>
+
+        <a href="blog.html" class="mobile-link">
+            <i class="bi bi-journal-text"></i>
+            <span>Blog</span>
+        </a>
+
+        <a href="contact.html" class="mobile-link">
+            <i class="bi bi-envelope"></i>
+            <span>Contact</span>
+        </a>
+
+        <div class="mobile-divider"></div>
+
+        <a href="login.html" class="mobile-link">
+            <i class="bi bi-box-arrow-in-right"></i>
+            <span>Login</span>
+        </a>
+
+        <a href="register.html" class="mobile-register">
+            <i class="bi bi-person-plus"></i>
+            <span>Register</span>
+        </a>
+
+    </div>
+
+</aside>
+
+<section class="service-page-hero" id="serviceHero">
+  <div class="service-hero-grid"></div>
+  <div class="service-hero-network">
+    <span class="network-line line-1"></span>
+    <span class="network-line line-2"></span>
+    <span class="network-line line-3"></span>
+    <span class="network-line line-4"></span>
+    <span class="network-line line-5"></span>
+    <span class="network-line line-6"></span>
+    <span class="network-dot dot-1"></span>
+    <span class="network-dot dot-2"></span>
+    <span class="network-dot dot-3"></span>
+    <span class="network-dot dot-4"></span>
+    <span class="network-dot dot-5"></span>
+    <span class="network-dot dot-6"></span>
+    <span class="network-dot dot-7"></span>
+  </div>
+
+  <div class="service-hero-shape"></div>
+
+  <div class="container">
+    <div class="service-hero-content">
+      <div class="service-hero-badge">
+        <i class="fa-solid fa-microchip"></i>
+        SMART ROBOTICS & AUTOMATION
+      </div>
+
+      <h1>Services</h1>
+
+      <p>
+        Empowering businesses with intelligent robotics, advanced automation,
+        and AI-driven solutions designed to improve efficiency and growth.
+      </p>
+
+      <div class="service-hero-breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fa-solid fa-angles-right"></i>
+        <span>Services</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="service-hero-particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</section>
+
+<section class="service-provide-section" id="serviceProvide">
+  <div class="container">
+    <div class="service-provide-header">
+      <span class="service-provide-label">SERVICES WE PROVIDE</span>
+
+      <h2>
+        Our Purpose Is To Deliver Excellence In
+        <strong>Service And Execution</strong>
+      </h2>
+    </div>
+
+    <div class="service-provide-grid">
+      <div class="service-provide-card">
+        <div class="service-provide-icon">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+
+        <div class="service-provide-content">
+          <h3>Robotic Automation</h3>
+
+          <p>
+            Intelligent robotic systems designed to automate repetitive tasks,
+            improve productivity, and create more efficient business operations.
+          </p>
+
+          <a href="error.html">
+            READ MORE
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="service-provide-card">
+        <div class="service-provide-icon">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+
+        <div class="service-provide-content">
+          <h3>Machine Learning</h3>
+
+          <p>
+            Data-driven machine learning solutions that help businesses identify
+            patterns, improve decisions, and create smarter automated processes.
+          </p>
+
+          <a href="error.html">
+            READ MORE
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="service-provide-card">
+        <div class="service-provide-icon">
+          <i class="fa-solid fa-flask-vial"></i>
+        </div>
+
+        <div class="service-provide-content">
+          <h3>Education &amp; Science</h3>
+
+          <p>
+            Advanced technology solutions for research, education, laboratories,
+            and scientific environments with intelligent automation capabilities.
+          </p>
+
+          <a href="error.html">
+            READ MORE
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="service-provide-card">
+        <div class="service-provide-icon">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+
+        <div class="service-provide-content">
+          <h3>Predictive Analysis</h3>
+
+          <p>
+            Predictive analytics solutions that transform business data into
+            actionable insights for planning, optimization, and future growth.
+          </p>
+
+          <a href="error.html">
+            READ MORE
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-why-section" id="whyChooseUs">
+  <div class="service-why-grid-bg"></div>
+
+  <div class="service-why-shape service-why-shape-one"></div>
+  <div class="service-why-shape service-why-shape-two"></div>
+
+  <div class="container">
+    <div class="service-why-wrapper">
+
+      <div class="service-why-visual">
+        <div class="service-why-image-glow"></div>
+
+        <div class="service-why-image-frame">
+          <img src="Assets/robo5.webp" alt="AI Robotics and Data Analysis">
+        </div>
+
+        <div class="service-why-ring ring-one"></div>
+        <div class="service-why-ring ring-two"></div>
+
+        <div class="service-why-tech tech-one">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+
+        <div class="service-why-tech tech-two">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+
+        <div class="service-why-tech tech-three">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+      </div>
+
+      <div class="service-why-content">
+        <span class="service-why-label">WHY CHOOSE US</span>
+
+        <h2>
+          Get Closer Look How
+          <strong>Business Develop In AI</strong>
+          Data Analysis
+        </h2>
+
+        <p class="service-why-description">
+          We combine robotics, artificial intelligence, and data-driven
+          technologies to create practical solutions that improve efficiency,
+          accuracy, and business performance.
+        </p>
+
+        <div class="service-why-points">
+
+          <div class="service-why-point">
+            <div class="service-why-point-icon">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div>
+              <h3>Intelligent Automation</h3>
+              <p>
+                Automate repetitive operations and improve workflow efficiency.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-why-point">
+            <div class="service-why-point-icon">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div>
+              <h3>Data Driven Decisions</h3>
+              <p>
+                Turn complex business data into useful and actionable insights.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-why-point">
+            <div class="service-why-point-icon">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div>
+              <h3>Scalable AI Solutions</h3>
+              <p>
+                Build flexible technology solutions that grow with your business.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <a href="error.html" class="service-why-btn">
+          <span>Read More</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="robot-pricing-section" id="pricing">
+  <div class="robot-pricing-grid"></div>
+  <div class="robot-pricing-glow pricing-glow-one"></div>
+  <div class="robot-pricing-glow pricing-glow-two"></div>
+
+  <div class="container">
+    <div class="robot-pricing-header">
+      <span class="robot-pricing-label">PRICING PLANS</span>
+
+      <h2>
+        Flexible Plans For
+        <strong>Smarter Automation</strong>
+      </h2>
+
+      <p>
+        Choose a solution that fits your business needs and scale your robotics
+        and automation capabilities as your operations grow.
+      </p>
+    </div>
+
+    <div class="robot-pricing-wrapper">
+
+      <div class="robot-price-card">
+        <div class="robot-price-top">
+          <div class="robot-price-icon">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+
+          <span class="robot-price-plan">STARTER</span>
+
+          <h3>Automation Basic</h3>
+
+          <p>
+            Essential automation tools for small teams and growing businesses.
+          </p>
+        </div>
+
+        <div class="robot-price-value">
+          <span class="robot-price-currency">$</span>
+          <strong>499</strong>
+          <span class="robot-price-period">/ month</span>
+        </div>
+
+        <div class="robot-price-divider"></div>
+
+        <ul class="robot-price-features">
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Basic Robotics Automation
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Workflow Optimization
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Basic Data Analytics
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Email Support
+          </li>
+        </ul>
+
+        <a href="error.html" class="robot-price-btn">
+          Get Started
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="robot-price-card robot-price-featured">
+        <div class="robot-price-popular">
+          MOST POPULAR
+        </div>
+
+        <div class="robot-price-top">
+          <div class="robot-price-icon">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+
+          <span class="robot-price-plan">PROFESSIONAL</span>
+
+          <h3>AI Automation Pro</h3>
+
+          <p>
+            Advanced AI-powered automation designed for expanding operations.
+          </p>
+        </div>
+
+        <div class="robot-price-value">
+          <span class="robot-price-currency">$</span>
+          <strong>999</strong>
+          <span class="robot-price-period">/ month</span>
+        </div>
+
+        <div class="robot-price-divider"></div>
+
+        <ul class="robot-price-features">
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Advanced Robotics Automation
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            AI &amp; Machine Learning
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Predictive Analytics
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Priority Support
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Performance Monitoring
+          </li>
+        </ul>
+
+        <a href="error.html" class="robot-price-btn robot-price-btn-featured">
+          Choose Plan
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="robot-price-card">
+        <div class="robot-price-top">
+          <div class="robot-price-icon">
+            <i class="fa-solid fa-building"></i>
+          </div>
+
+          <span class="robot-price-plan">ENTERPRISE</span>
+
+          <h3>Smart Enterprise</h3>
+
+          <p>
+            Tailored automation systems for complex enterprise requirements.
+          </p>
+        </div>
+
+        <div class="robot-price-value robot-price-custom">
+          <strong>Custom</strong>
+        </div>
+
+        <div class="robot-price-divider"></div>
+
+        <ul class="robot-price-features">
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Custom Robotics Systems
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Enterprise AI Integration
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Dedicated Analytics
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Dedicated Support Team
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check"></i>
+            Custom Deployment
+          </li>
+        </ul>
+
+        <a href="error.html" class="robot-price-btn">
+          Contact Us
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="robot-pricing-bottom">
+      <div class="robot-pricing-bottom-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div>
+          <h4>Secure Solutions</h4>
+          <p>Built with reliable technology and protection.</p>
+        </div>
+      </div>
+
+      <div class="robot-pricing-bottom-item">
+        <i class="fa-solid fa-arrows-to-circle"></i>
+        <div>
+          <h4>Flexible Scaling</h4>
+          <p>Expand your automation as your business grows.</p>
+        </div>
+      </div>
+
+      <div class="robot-pricing-bottom-item">
+        <i class="fa-solid fa-headset"></i>
+        <div>
+          <h4>Expert Support</h4>
+          <p>Get assistance throughout your automation journey.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-process-section" id="serviceProcess">
+  <div class="service-process-bg"></div>
+
+  <div class="container">
+    <div class="service-process-header">
+      <span class="service-process-label">HOW IT WORKS</span>
+
+      <h2>
+        Turning Ideas Into
+        <strong>Intelligent Solutions</strong>
+      </h2>
+
+      <p>
+        Our structured approach helps us understand your requirements,
+        design the right solution, and deliver reliable robotics and AI
+        systems for your business.
+      </p>
+    </div>
+
+    <div class="service-process-grid">
+
+      <div class="service-process-card">
+        <div class="service-process-number">01</div>
+
+        <div class="service-process-icon">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+
+        <h3>Understand</h3>
+
+        <p>
+          We study your business goals, challenges, workflows, and technology
+          requirements to identify the right opportunities for automation.
+        </p>
+
+        <div class="service-process-arrow">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <div class="service-process-card">
+        <div class="service-process-number">02</div>
+
+        <div class="service-process-icon">
+          <i class="fa-solid fa-lightbulb"></i>
+        </div>
+
+        <h3>Plan</h3>
+
+        <p>
+          Our team creates a practical technology roadmap covering automation,
+          AI integration, system architecture, and implementation requirements.
+        </p>
+
+        <div class="service-process-arrow">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <div class="service-process-card">
+        <div class="service-process-number">03</div>
+
+        <div class="service-process-icon">
+          <i class="fa-solid fa-gears"></i>
+        </div>
+
+        <h3>Build</h3>
+
+        <p>
+          We develop and integrate robotics, machine learning, analytics,
+          and automation systems around your operational needs.
+        </p>
+
+        <div class="service-process-arrow">
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <div class="service-process-card">
+        <div class="service-process-number">04</div>
+
+        <div class="service-process-icon">
+          <i class="fa-solid fa-rocket"></i>
+        </div>
+
+        <h3>Deliver</h3>
+
+        <p>
+          After testing and optimization, we deploy the solution and provide
+          ongoing support to help your business achieve sustainable results.
+        </p>
+
+        <div class="service-process-arrow">
+          <i class="fa-solid fa-check"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="service-process-bottom">
+      <div class="service-process-bottom-icon">
+        <i class="fa-solid fa-microchip"></i>
+      </div>
+
+      <div class="service-process-bottom-content">
+        <span>SMARTER TECHNOLOGY</span>
+        <h3>Ready To Transform Your Business?</h3>
+      </div>
+
+      <a href="error.html" class="service-process-btn">
+        Start Your Project
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="service-testimonial-section" id="serviceTestimonials">
+  <div class="service-testimonial-bg"></div>
+
+  <div class="container">
+    <div class="service-testimonial-header">
+      <span class="service-testimonial-label">CLIENT EXPERIENCES</span>
+
+      <h2>
+        What Our Clients Say About
+        <strong>Our Solutions</strong>
+      </h2>
+
+      <p>
+        Discover how intelligent automation and AI-powered solutions can help
+        businesses improve efficiency, productivity, and operational performance.
+      </p>
+    </div>
+
+    <div class="service-testimonial-slider">
+
+      <div class="service-testimonial-card">
+        <div class="service-testimonial-top">
+          <div class="service-testimonial-quote">
+            <i class="fa-solid fa-quote-left"></i>
+          </div>
+
+          <div class="service-testimonial-rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+
+        <p class="service-testimonial-text">
+          The automation solution helped us simplify repetitive operations and
+          create a more structured workflow. The team understood our
+          requirements and delivered a practical solution.
+        </p>
+
+        <div class="service-testimonial-user">
+          <div class="service-testimonial-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <div>
+            <h3>Arun Kumar</h3>
+            <span>Operations Manager</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-testimonial-card service-testimonial-active">
+        <div class="service-testimonial-top">
+          <div class="service-testimonial-quote">
+            <i class="fa-solid fa-quote-left"></i>
+          </div>
+
+          <div class="service-testimonial-rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+
+        <p class="service-testimonial-text">
+          Their AI and data analysis approach gave our team better visibility
+          into business processes. The solution was flexible, scalable, and
+          easy for our team to understand.
+        </p>
+
+        <div class="service-testimonial-user">
+          <div class="service-testimonial-avatar">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+
+          <div>
+            <h3>Rahul Sharma</h3>
+            <span>Plant Director</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-testimonial-card">
+        <div class="service-testimonial-top">
+          <div class="service-testimonial-quote">
+            <i class="fa-solid fa-quote-left"></i>
+          </div>
+
+          <div class="service-testimonial-rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+
+        <p class="service-testimonial-text">
+          The implementation process was clear from the beginning. Their
+          robotics and automation expertise helped us modernize several
+          important workflows.
+        </p>
+
+        <div class="service-testimonial-user">
+          <div class="service-testimonial-avatar">
+            <i class="fa-solid fa-user"></i>
+          </div>
+
+          <div>
+            <h3>Priya Menon</h3>
+            <span>Technology Lead</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="service-testimonial-controls">
+      <button class="service-testimonial-prev" type="button" aria-label="Previous testimonial">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+
+      <div class="service-testimonial-dots">
+        <button class="testimonial-dot active" type="button" aria-label="Testimonial 1"></button>
+        <button class="testimonial-dot" type="button" aria-label="Testimonial 2"></button>
+        <button class="testimonial-dot" type="button" aria-label="Testimonial 3"></button>
+      </div>
+
+      <button class="service-testimonial-next" type="button" aria-label="Next testimonial">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <div class="service-testimonial-cta">
+      <div>
+        <span>LET'S BUILD SOMETHING SMARTER</span>
+        <h3>Transform Your Business With Intelligent Technology</h3>
+      </div>
+
+      <a href="error.html" class="service-testimonial-btn">
+        Get Started
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="service-stats-section" id="serviceStats">
+  <div class="service-stats-glow stats-glow-one"></div>
+  <div class="service-stats-glow stats-glow-two"></div>
+
+  <div class="container">
+    <div class="service-stats-layout">
+
+      <div class="service-stats-content">
+        <span class="service-stats-label">OUR EXPERTISE</span>
+
+        <h2>
+          Technology That
+          <strong>Creates Real Impact</strong>
+        </h2>
+
+        <p>
+          From intelligent robotics to AI-powered analytics, we combine
+          advanced technology with practical business requirements to build
+          solutions that are scalable, reliable, and ready for the future.
+        </p>
+
+        <a href="error.html" class="service-stats-btn">
+          Explore Solutions
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="service-stats-grid">
+
+        <div class="service-stat-card">
+          <div class="service-stat-icon">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+
+          <strong class="service-stat-number" data-target="120">0</strong>
+          <span class="service-stat-plus">+</span>
+
+          <h3>Automation Projects</h3>
+          <p>Intelligent automation solutions across multiple operations.</p>
+        </div>
+
+        <div class="service-stat-card">
+          <div class="service-stat-icon">
+            <i class="fa-solid fa-building"></i>
+          </div>
+
+          <strong class="service-stat-number" data-target="35">0</strong>
+          <span class="service-stat-plus">+</span>
+
+          <h3>Business Domains</h3>
+          <p>Technology solutions designed for different industries.</p>
+        </div>
+
+        <div class="service-stat-card">
+          <div class="service-stat-icon">
+            <i class="fa-solid fa-code"></i>
+          </div>
+
+          <strong class="service-stat-number" data-target="85">0</strong>
+          <span class="service-stat-plus">+</span>
+
+          <h3>Technology Solutions</h3>
+          <p>AI, robotics, analytics, IoT, and automation capabilities.</p>
+        </div>
+
+        <div class="service-stat-card">
+          <div class="service-stat-icon">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+
+          <strong class="service-stat-number" data-target="24">0</strong>
+          <span class="service-stat-plus">/7</span>
+
+          <h3>Support Approach</h3>
+          <p>Continuous focus on reliability, maintenance, and support.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="service-stats-tech-strip">
+      <div class="service-tech-item">
+        <i class="fa-solid fa-brain"></i>
+        <span>Artificial Intelligence</span>
+      </div>
+
+      <div class="service-tech-item">
+        <i class="fa-solid fa-gears"></i>
+        <span>Robotic Automation</span>
+      </div>
+
+      <div class="service-tech-item">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Predictive Analytics</span>
+      </div>
+
+      <div class="service-tech-item">
+        <i class="fa-solid fa-network-wired"></i>
+        <span>Smart IoT</span>
+      </div>
+
+      <div class="service-tech-item">
+        <i class="fa-solid fa-eye"></i>
+        <span>Machine Vision</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-industries-section" id="serviceIndustries">
+  <div class="service-industries-bg"></div>
+
+  <div class="container">
+    <div class="service-industries-header">
+      <span class="service-industries-label">INDUSTRIES WE SERVE</span>
+
+      <h2>
+        Intelligent Solutions For
+        <strong>Different Industries</strong>
+      </h2>
+
+      <p>
+        Our robotics, AI, automation, and analytics solutions can be adapted
+        to different business environments and operational requirements.
+      </p>
+    </div>
+
+    <div class="service-industries-grid">
+
+      <div class="service-industry-card">
+        <div class="service-industry-icon">
+          <i class="fa-solid fa-industry"></i>
+        </div>
+        <div class="service-industry-content">
+          <h3>Manufacturing</h3>
+          <p>
+            Smart automation and robotic systems for efficient production,
+            quality control, and optimized workflows.
+          </p>
+          <a href="error.html">
+            Explore
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="service-industry-card">
+        <div class="service-industry-icon">
+          <i class="fa-solid fa-truck-fast"></i>
+        </div>
+        <div class="service-industry-content">
+          <h3>Logistics</h3>
+          <p>
+            Intelligent technology for warehouse operations, inventory
+            movement, tracking, and process automation.
+          </p>
+          <a href="error.html">
+            Explore
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="service-industry-card">
+        <div class="service-industry-icon">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <div class="service-industry-content">
+          <h3>Healthcare</h3>
+          <p>
+            AI and automation solutions that support modern healthcare
+            workflows, data analysis, and operational efficiency.
+          </p>
+          <a href="error.html">
+            Explore
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="service-industry-card">
+        <div class="service-industry-icon">
+          <i class="fa-solid fa-car-side"></i>
+        </div>
+        <div class="service-industry-content">
+          <h3>Automotive</h3>
+          <p>
+            Robotics and vision-based automation for assembly, inspection,
+            material handling, and production processes.
+          </p>
+          <a href="error.html">
+            Explore
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="service-industry-card">
+        <div class="service-industry-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <div class="service-industry-content">
+          <h3>Energy</h3>
+          <p>
+            Smart monitoring, predictive analytics, and automation solutions
+            for modern energy operations.
+          </p>
+          <a href="error.html">
+            Explore
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="service-industry-card">
+        <div class="service-industry-icon">
+          <i class="fa-solid fa-microchip"></i>
+        </div>
+        <div class="service-industry-content">
+          <h3>Electronics</h3>
+          <p>
+            Precision automation, machine vision, and intelligent inspection
+            solutions for electronics production environments.
+          </p>
+          <a href="error.html">
+            Explore
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="service-industries-bottom">
+      <div class="service-industries-bottom-icon">
+        <i class="fa-solid fa-shapes"></i>
+      </div>
+
+      <div class="service-industries-bottom-text">
+        <span>YOUR INDUSTRY, YOUR SOLUTION</span>
+        <h3>Need A Customized Automation Strategy?</h3>
+      </div>
+
+      <a href="error.html" class="service-industries-btn">
+        Talk To Our Team
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="service-solution-section" id="serviceSolution">
+  <div class="service-solution-bg"></div>
+  <div class="service-solution-glow solution-glow-one"></div>
+  <div class="service-solution-glow solution-glow-two"></div>
+
+  <div class="container">
+    <div class="service-solution-wrapper">
+
+      <div class="service-solution-visual">
+        <div class="service-solution-image-wrap">
+          <div class="service-solution-image-bg"></div>
+
+          <img
+            src="Assets/robo1.webp"
+            alt="Intelligent Robotics Automation"
+            class="service-solution-image"
+          >
+
+          <div class="service-solution-badge solution-badge-one">
+            <i class="fa-solid fa-brain"></i>
+            <div>
+              <strong>AI Powered</strong>
+              <span>Smart Decisions</span>
+            </div>
+          </div>
+
+          <div class="service-solution-badge solution-badge-two">
+            <i class="fa-solid fa-gears"></i>
+            <div>
+              <strong>Automation</strong>
+              <span>Better Efficiency</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-solution-orbit solution-orbit-one"></div>
+        <div class="service-solution-orbit solution-orbit-two"></div>
+      </div>
+
+      <div class="service-solution-content">
+        <span class="service-solution-label">END-TO-END SOLUTIONS</span>
+
+        <h2>
+          We Build Technology
+          <strong>That Works For Your Business</strong>
+        </h2>
+
+        <p class="service-solution-intro">
+          Our services bring together robotics, artificial intelligence,
+          automation, data analysis, and connected technologies to solve
+          real business challenges and improve everyday operations.
+        </p>
+
+        <div class="service-solution-features">
+
+          <div class="service-solution-feature">
+            <div class="service-solution-feature-icon">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+
+            <div>
+              <h3>Robotics & Automation</h3>
+              <p>
+                Automate repetitive processes and improve operational
+                consistency with intelligent robotic systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-solution-feature">
+            <div class="service-solution-feature-icon">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <div>
+              <h3>AI & Machine Learning</h3>
+              <p>
+                Use intelligent models and data-driven insights to support
+                better processes and business decisions.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-solution-feature">
+            <div class="service-solution-feature-icon">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+
+            <div>
+              <h3>Machine Vision</h3>
+              <p>
+                Enable automated inspection, object detection, monitoring,
+                and quality-focused workflows.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-solution-feature">
+            <div class="service-solution-feature-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div>
+              <h3>Predictive Analytics</h3>
+              <p>
+                Convert business data into useful insights for planning,
+                optimization, and future operational needs.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="service-solution-actions">
+          <a href="error.html" class="service-solution-btn">
+            Discover Our Solutions
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <div class="service-solution-note">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Designed For Scalable Growth</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="service-cta-section" id="serviceCta">
+  <div class="service-cta-bg"></div>
+
+  <div class="service-cta-glow service-cta-glow-one"></div>
+  <div class="service-cta-glow service-cta-glow-two"></div>
+
+  <div class="container">
+    <div class="service-cta-wrapper">
+
+      <div class="service-cta-content">
+        <span class="service-cta-label">
+          <i class="fa-solid fa-microchip"></i>
+          READY TO TRANSFORM
+        </span>
+
+        <h2>
+          Build A
+          <strong>Smarter Future</strong>
+          With Intelligent Technology
+        </h2>
+
+        <p>
+          Let's create robotics, AI, and automation solutions that turn your
+          business challenges into smarter, faster, and more efficient
+          operations.
+        </p>
+
+        <div class="service-cta-actions">
+          <a href="error.html" class="service-cta-primary">
+            Get Started
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a href="error.html" class="service-cta-secondary">
+            Talk To Our Team
+            <i class="fa-solid fa-headset"></i>
+          </a>
+        </div>
+
+        <div class="service-cta-points">
+          <div class="service-cta-point">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Custom Solutions</span>
+          </div>
+
+          <div class="service-cta-point">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>AI Powered</span>
+          </div>
+
+          <div class="service-cta-point">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Scalable Technology</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-cta-visual">
+        <div class="service-cta-orbit cta-orbit-one"></div>
+        <div class="service-cta-orbit cta-orbit-two"></div>
+        <div class="service-cta-orbit cta-orbit-three"></div>
+
+        <div class="service-cta-core">
+          <div class="service-cta-core-ring"></div>
+          <i class="fa-solid fa-robot"></i>
+        </div>
+
+        <div class="service-cta-node cta-node-one">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+
+        <div class="service-cta-node cta-node-two">
+          <i class="fa-solid fa-gears"></i>
+        </div>
+
+        <div class="service-cta-node cta-node-three">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+
+        <div class="service-cta-node cta-node-four">
+          <i class="fa-solid fa-network-wired"></i>
+        </div>
+
+        <div class="service-cta-connectors">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="robot-footer">
+    <div class="robot-footer-top">
+        <div class="container">
+
+            <div class="row g-5">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="robot-footer-brand">
+
+                        <a href="index.html" class="robot-footer-logo">
+                            <img src="Assets/blacklogo.webp" alt="Robotics Automation Logo">
+                          
+                        </a>
+
+                        <p>
+                            Building smarter businesses through robotics,
+                            artificial intelligence and advanced automation
+                            technologies.
+                        </p>
+
+                        <a href="error.html" class="robot-footer-read">
+                            Discover More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <div class="robot-footer-column">
+
+                        <h3>Quick Links</h3>
+
+                        <a href="index.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Home
+                        </a>
+
+                        <a href="about.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            About
+                        </a>
+
+                        <a href="services.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Services
+                        </a>
+
+                        <a href="blog.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Blog
+                        </a>
+
+                        <a href="contact.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Contact
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="robot-footer-column">
+
+                        <h3>Our Services</h3>
+
+                        <a href="error.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Industrial Robotics
+                        </a>
+
+                        <a href="error.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Smart Automation
+                        </a>
+
+                        <a href="error.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Artificial Intelligence
+                        </a>
+
+                        <a href="error.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Machine Vision
+                        </a>
+
+                        <a href="error.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Industrial IoT
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="robot-footer-column">
+
+                        <h3>Contact Us</h3>
+
+                        <a href="error.html" class="robot-footer-contact">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>hello@stackly.com</span>
+                        </a>
+
+                        <a href="error.html" class="robot-footer-contact">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </a>
+
+                        <a href="error.html" class="robot-footer-contact">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Chennai, Tamil Nadu, India</span>
+                        </a>
+
+                        <a href="error.html" class="robot-footer-contact">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Mon - Fri : 09:00 - 18:00</span>
+                        </a>
+
+                        <div class="robot-footer-socials">
+
+                            <a href="error.html" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="error.html" aria-label="X">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="robot-footer-bottom">
+        <div class="container">
+
+            <div class="robot-footer-bottom-inner">
+
+                <p>
+                    &copy; 2026 RoboTech. All Rights Reserved.
+                </p>
+
+                <div class="robot-footer-legal">
+
+                    <a href="error.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="error.html">
+                        Terms & Conditions
+                    </a>
+
+                    <a href="error.html">
+                        Cookie Policy
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="nav.js">
+</script>
+<script src="service.js"></script>
+</body>
+</head>

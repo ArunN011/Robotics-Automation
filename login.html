@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotics & Automation | Login</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+  <main class="robot-login-page">
+    <div class="robot-login-grid"></div>
+
+    <div class="robot-login-glow robot-login-glow-one"></div>
+    <div class="robot-login-glow robot-login-glow-two"></div>
+
+    <a href="index.html" class="robot-login-back">
+      <i class="fa-solid fa-arrow-left"></i>
+      Back To Home
+    </a>
+
+    <div class="robot-login-floating robot-float-one">
+      <i class="fa-solid fa-microchip"></i>
+    </div>
+
+    <div class="robot-login-floating robot-float-two">
+      <i class="fa-solid fa-gears"></i>
+    </div>
+
+    <div class="robot-login-floating robot-float-three">
+      <i class="fa-solid fa-network-wired"></i>
+    </div>
+
+    <div class="robot-login-layout">
+
+      <div class="robot-login-visual">
+        <div class="robot-visual-content">
+          <span class="robot-visual-label">
+            <i class="fa-solid fa-robot"></i>
+            ROBOTICS & AUTOMATION
+          </span>
+
+          <h1>
+            Intelligent
+            <strong>Automation</strong>
+            Starts Here
+          </h1>
+
+          <p>
+            Sign in to access your robotics systems, automation insights,
+            project activity, and smart technology dashboard.
+          </p>
+
+          <div class="robot-visual-features">
+
+            <div class="robot-visual-feature">
+              <div class="robot-visual-feature-icon">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <div>
+                <h3>AI Powered</h3>
+                <span>Intelligent decision support</span>
+              </div>
+            </div>
+
+            <div class="robot-visual-feature">
+              <div class="robot-visual-feature-icon">
+                <i class="fa-solid fa-gears"></i>
+              </div>
+              <div>
+                <h3>Smart Automation</h3>
+                <span>Connected business operations</span>
+              </div>
+            </div>
+
+            <div class="robot-visual-feature">
+              <div class="robot-visual-feature-icon">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <div>
+                <h3>Live Insights</h3>
+                <span>Monitor your automation environment</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="robot-login-orbit">
+          <div class="robot-orbit orbit-large"></div>
+          <div class="robot-orbit orbit-medium"></div>
+          <div class="robot-orbit orbit-small"></div>
+
+          <div class="robot-orbit-core">
+            <div class="robot-orbit-inner">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+          </div>
+
+          <div class="robot-orbit-node orbit-node-one">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+
+          <div class="robot-orbit-node orbit-node-two">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+
+          <div class="robot-orbit-node orbit-node-three">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+
+          <div class="robot-orbit-node orbit-node-four">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="robot-login-card-wrap">
+
+        <div class="robot-login-card">
+
+          <div class="robot-login-brand">
+            <a href="index.html">
+              <img src="Assets/blacklogo.webp" alt="Stackly">
+            </a>
+          </div>
+
+          <div class="robot-login-heading">
+            <span>SMART TECHNOLOGY PORTAL</span>
+
+            <h2>Welcome Back</h2>
+
+            <p>
+              Sign in to manage your robotics, automation, and AI experience.
+            </p>
+          </div>
+
+          <div class="robot-role-selector">
+            <button
+              type="button"
+              class="robot-role-card active"
+              data-role="user"
+            >
+              <div class="robot-role-icon">
+                <i class="fa-solid fa-user"></i>
+              </div>
+
+              <div>
+                <strong>User</strong>
+                <span>Access your automation dashboard</span>
+              </div>
+            </button>
+
+            <button
+              type="button"
+              class="robot-role-card"
+              data-role="admin"
+            >
+              <div class="robot-role-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+
+              <div>
+                <strong>Admin</strong>
+                <span>Manage robotics operations</span>
+              </div>
+            </button>
+          </div>
+
+          <div class="robot-selected-role" id="selectedRoleText">
+            <i class="fa-solid fa-circle-info"></i>
+            User login selected
+          </div>
+
+          <form id="robotLoginForm" novalidate>
+
+            <input type="hidden" id="selectedRole" value="user">
+
+            <div class="robot-form-group">
+              <label for="loginEmail">Email Address</label>
+
+              <div class="robot-input-box">
+                <i class="fa-regular fa-envelope"></i>
+
+                <input
+                  type="email"
+                  id="loginEmail"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                >
+              </div>
+
+              <small class="robot-field-error" id="emailError"></small>
+            </div>
+
+            <div class="robot-form-group">
+              <label for="loginPassword">Password</label>
+
+              <div class="robot-input-box">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                  type="password"
+                  id="loginPassword"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                >
+
+                <button
+                  type="button"
+                  class="robot-password-toggle"
+                  id="passwordToggle"
+                  aria-label="Show password"
+                >
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+
+              <small class="robot-field-error" id="passwordError"></small>
+            </div>
+
+            <div class="robot-form-options">
+              <label class="robot-remember">
+                <input type="checkbox" id="rememberMe">
+                <span class="robot-custom-checkbox"></span>
+                <span>Remember Me</span>
+              </label>
+
+              <a href="error.html">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="robot-login-submit">
+              <span>Sign In</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </button>
+
+            <div class="robot-login-register">
+              <span>Don't have an account?</span>
+              <a href="register.html">Create Account</a>
+            </div>
+
+            <div class="robot-login-security">
+              <i class="fa-solid fa-shield-halved"></i>
+
+              <p>
+                Your account is protected with secure
+                authentication for your automation workspace.
+              </p>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
